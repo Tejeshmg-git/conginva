@@ -146,10 +146,8 @@ body.dark-mode .featured-blog-card {
 
 /* 3️⃣ CATEGORY FILTER BAR */
 .category-filter-section {
-    position: sticky;
-    top: 80px;
+    position: relative;
     background: var(--white);
-    z-index: 100;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     padding: 20px 0;

@@ -209,7 +209,7 @@ body.admin-dashboard-page {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 16px;
     position: sticky;
     top: 0;
     z-index: 900;
@@ -355,11 +355,10 @@ body.admin-dashboard-page {
 
 /* 🔹 CONTENT AREA */
 .admin-content-wrapper {
-    padding: 24px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    /* Reduced from 32px */
+    gap: 12px;
 }
 
 .admin-card {
@@ -367,8 +366,7 @@ body.admin-dashboard-page {
     border: 1px solid var(--admin-border-color);
     border-radius: var(--admin-radius);
     box-shadow: var(--admin-shadow-sm);
-    padding: 20px;
-    /* Reduced padding */
+    padding: 10px;
     transition: var(--admin-transition);
 }
 
@@ -404,8 +402,7 @@ body.admin-dashboard-page {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4px;
-    /* Reduced margin */
+    margin-bottom: 2px;
 }
 
 .admin-section-title {
@@ -420,7 +417,7 @@ body.admin-dashboard-page {
 .admin-kpi-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
 .kpi-card {
@@ -733,7 +730,7 @@ body.admin-dashboard-page {
 .admin-split-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 12px;
 }
 
 /* System Health */
@@ -897,7 +894,7 @@ body.admin-dashboard-page {
     }
 
     .mobile-toggle {
-        display: block;
+        display: flex;
     }
 
     .admin-kpi-grid {
@@ -913,7 +910,7 @@ body.admin-dashboard-page {
     }
 
     .admin-topbar {
-        padding: 0 16px;
+        padding: 0 8px;
     }
 
     .admin-topbar-right {
@@ -921,7 +918,7 @@ body.admin-dashboard-page {
     }
 
     .admin-content-wrapper {
-        padding: 16px;
+        padding: 8px;
     }
 
     .admin-table-actions {

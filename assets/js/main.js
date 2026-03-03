@@ -94,6 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
 
+        const backBtn = navMenu.querySelector('#mobile-back-btn');
+        if (backBtn) {
+            backBtn.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
         // Toggle dropdowns on mobile
         const dropdowns = navMenu.querySelectorAll('.dropdown');
         dropdowns.forEach(dropdown => {

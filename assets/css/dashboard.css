@@ -72,6 +72,25 @@ html {
     color: var(--text-main);
 }
 
+.mobile-menu-close {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1.5px solid var(--gold-accent);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--gold-accent);
+    background: rgba(184, 156, 99, 0.05);
+}
+
+.mobile-menu-close:hover {
+    background: var(--gold-accent);
+    color: #fff;
+}
+
 .sidebar-nav {
     padding: 24px 16px;
     display: flex;
@@ -735,8 +754,9 @@ html {
     }
 
     .mobile-menu-toggle,
-    .mobile-menu-close {
-        display: block;
+    .mobile-menu-close,
+    .mobile-toggle {
+        display: flex;
     }
 
     .dashboard-content {

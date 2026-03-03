@@ -36,12 +36,6 @@
                         style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-inter); font-weight: 500; color: var(--gold-accent); border: 1px solid var(--gold-accent); padding: 2px 6px; border-radius: 4px; line-height: 1;">User
                         OS</span>
                 </a>
-                <button class="icon-btn mobile-menu-close" id="mobile-sidebar-close" aria-label="Close sidebar">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7" />
-                    </svg>
-                    <span>Return to Page</span>
-                </button>
             </div>
 
             <nav class="sidebar-nav">
@@ -550,15 +544,19 @@
         // Simple Sidebar Toggle for Mobile
         const sidebar = document.getElementById('dashboard-sidebar');
         const openBtn = document.getElementById('mobile-sidebar-open');
-        const closeBtn = document.getElementById('mobile-sidebar-close');
+        const overlay = document.getElementById('sidebar-overlay');
 
-        if (openBtn && closeBtn && sidebar) {
+        if (openBtn && sidebar) {
             openBtn.addEventListener('click', () => {
                 sidebar.classList.add('mobile-open');
+                if (overlay) overlay.classList.add('active');
             });
+        }
 
-            closeBtn.addEventListener('click', () => {
+        if (overlay && sidebar) {
+            overlay.addEventListener('click', () => {
                 sidebar.classList.remove('mobile-open');
+                overlay.classList.remove('active');
             });
         }
 
@@ -593,6 +591,7 @@
                 // Close sidebar on mobile
                 if (sidebar) {
                     sidebar.classList.remove("mobile-open");
+                    if (overlay) overlay.classList.remove('active');
                 }
 
                 window.scrollTo(0, 0);

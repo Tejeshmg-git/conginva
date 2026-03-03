@@ -111,6 +111,8 @@ body.admin-dashboard-page {
     padding: 24px 16px;
     flex-grow: 1;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .admin-nav-group {
@@ -139,6 +141,14 @@ body.admin-dashboard-page {
     position: relative;
     transition: var(--admin-transition);
     margin-bottom: 4px;
+}
+
+.admin-nav-link.text-danger {
+    color: var(--admin-accent-danger) !important;
+}
+
+.admin-nav-link.text-danger:hover {
+    background-color: rgba(229, 62, 62, 0.1) !important;
 }
 
 .sidebar-overlay {
@@ -378,7 +388,7 @@ body.admin-dashboard-page {
 .tab-pane.active {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
 }
 
 @keyframes fadeTabIn {
@@ -418,6 +428,7 @@ body.admin-dashboard-page {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    padding: 0;
 }
 
 .kpi-card {

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cogniva | Advanced Features & Cognitive Capabilities</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore Cogniva's futuristic cognitive tracking features: AI insights, automated stack building, and secure data mapping.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Global JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="v2-page features-page">
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                <span>Cogniva</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="../index.html">Home <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="../index.html">Home V1</a>
+                            <a href="home-v2.html">Home V2</a>
+                        </div>
+                    </li>
+                    <li><a href="features.html" class="active">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="user-dashboard.html">User Dashboard</a>
+                            <a href="admin-dashboard.html">Admin Dashboard</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="rtl-toggle" title="Switch Direction">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-gold header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ROCKET HERO (Futuristic Version) -->
+        <section class="features-hero">
+            <div class="hero-grid-pattern"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="reveal">
+                    <h1>The Future of Cognitive Engineering.</h1>
+                    <p>Experience the most advanced supplement tracking ecosystem ever built. Professional-grade
+                        neuro-mapping for everyone.</p>
+                    <div class="hero-btns" style="justify-content: center; display: flex; gap: 20px;">
+                        <a href="register.html" class="btn btn-gold btn-lg magnetic-btn">Start Engineering</a>
+                        <a href="#dashboard" class="btn btn-outline btn-lg"
+                            style="color: var(--text-main); border-color: var(--border-color);">Watch Demo</a>
+                    </div>
+                </div>
+
+                <div class="hero-mockup-wrapper reveal" style="transition-delay: 0.3s;">
+                    <div class="mockup-aura"></div>
+                    <!-- Hero Image Update -->
+                    <img src="../assets/images/HeroImage.jpg" alt="Cogniva Platform Interface"
+                        style="width: 100%; border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.1); transform: perspective(1000px) rotateX(10deg); border: 1px solid var(--border-color);">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1 — CORE CAPABILITIES GRID -->
+        <section class="feat-grid-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Core Intelligence.</h2>
+                    <p class="section-subtext">Six foundational tools built for absolute precision.</p>
+                </div>
+
+                <div class="cap-grid">
+                    <div class="cap-card reveal">
+                        <div class="cap-icon">⚡</div>
+                        <h3>Bio-Identity Mapping</h3>
+                        <p>Create a digital twin of your supplement history and physiological responses.</p>
+                    </div>
+                    <div class="cap-card reveal" style="transition-delay: 0.1s;">
+                        <div class="cap-icon">🛰️</div>
+                        <h3>Real-time Synthesis</h3>
+                        <p>Analyze how multiple supplements interact within your unique bio-profile.</p>
+                    </div>
+                    <div class="cap-card reveal" style="transition-delay: 0.2s;">
+                        <div class="cap-icon">🛡️</div>
+                        <h3>Dosage Guardians</h3>
+                        <p>Stay within safe therapeutic ranges with automated toxicity alerts.</p>
+                    </div>
+                    <div class="cap-card reveal" style="transition-delay: 0.3s;">
+                        <div class="cap-icon">🌊</div>
+                        <h3>Consistency Flow</h3>
+                        <p>Deep-tracking habits built to endure through smart-notification algorithms.</p>
+                    </div>
+                    <div class="cap-card reveal" style="transition-delay: 0.4s;">
+                        <div class="cap-icon">🔍</div>
+                        <h3>Insight Extraction</h3>
+                        <p>Turn raw data into actionable cognitive protocols within seconds.</p>
+                    </div>
+                    <div class="cap-card reveal" style="transition-delay: 0.5s;">
+                        <div class="cap-icon">🔗</div>
+                        <h3>Third-Party Sync</h3>
+                        <p>Connect with wearables to layer physiological data over your stack logs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 — INTERACTIVE DASHBOARD SHOWCASE -->
+        <section class="feat-showcase-section" id="dashboard">
+            <div class="container">
+                <div class="showcase-layout">
+                    <div class="showcase-sticky-text reveal">
+                        <span
+                            style="color: var(--feat-neon-gold); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">Command
+                            Center</span>
+                        <h2>A Dashboard Built for High-Signal Decision Making.</h2>
+                        <p>No clutter. Just the insights you need to optimize your baseline.</p>
+
+                        <div class="step-items" style="margin-top: 40px;">
+                            <div class="step-item" style="margin-bottom: 30px;">
+                                <h4 style="color: var(--feat-neon-gold);">01. Dynamic Health Scores</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Visual indicators of your
+                                    cognitive
+                                    readiness and metabolic load.</p>
+                            </div>
+                            <div class="step-item" style="margin-bottom: 30px; opacity: 0.5;">
+                                <h4>02. Stack Performance Graphs</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Correlate intake with focus
+                                    metrics over weeks and months.
+                                </p>
+                            </div>
+                            <div class="step-item" style="opacity: 0.5;">
+                                <h4>03. Automated Reminders</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Context-aware alerts that adapt
+                                    to your daily schedule.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-mockup-area reveal" style="transition-delay: 0.2s;">
+                        <div class="showcase-mockup">
+                            <img src="../assets/images/Features/Section-2.jpg" alt="Dashboard Preview Screenshot"
+                                style="border-radius: 16px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);">
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                            <div
+                                style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 25px; border-radius: 24px; box-shadow: var(--shadow-sm);">
+                                <h5
+                                    style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--feat-neon-gold); margin-bottom: 12px;">
+                                    Weekly Flux</h5>
+                                <div style="height: 60px; display: flex; align-items: flex-end; gap: 5px;">
+                                    <div
+                                        style="flex: 1; height: 30%; background: var(--bg-preview); border-radius: 2px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; height: 60%; background: var(--feat-neon-gold); opacity: 0.5; border-radius: 2px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; height: 45%; background: var(--bg-preview); border-radius: 2px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; height: 80%; background: var(--feat-neon-gold); border-radius: 2px;">
+                                    </div>
+                                    <div
+                                        style="flex: 1; height: 40%; background: var(--bg-preview); border-radius: 2px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 25px; border-radius: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: center;">
+                                <div
+                                    style="font-family: 'Cormorant Garamond'; font-size: 1.1rem; font-style: italic; line-height: 1.4;">
+                                    “Unprecedented clarity in the consumer space.”
+                                </div>
+                                <div
+                                    style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6; text-transform: uppercase;">
+                                    — Protocol Review</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="margin-top: 20px; background: rgba(184,156,99,0.03); border: 1px solid var(--border-color); padding: 20px; border-radius: 20px; display: flex; gap: 15px; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--feat-neon-gold); border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                AI</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">System optimized for peak
+                                metabolic load detection. Currently monitoring 14 bio-markers.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 — SMART AUTOMATION ENGINE -->
+        <section class="feat-automation-section reveal">
+            <div class="container automation-grid">
+                <div>
+                    <h2 style="font-size: 3.5rem; margin-bottom: 24px;">Automated Intelligence.</h2>
+                    <p style="margin-bottom: 40px;">Let the system handle the complexity. You focus on the results.</p>
+
+                    <div class="automation-cards">
+                        <div class="cap-card" style="margin-bottom: 20px; padding: 30px;">
+                            <h4 style="color: var(--feat-neon-gold); margin-bottom: 8px;">Auto-Inventory Tracking</h4>
+                            <p style="font-size: 0.9rem; margin:0;">Predicts when you need refills based on daily logs.
+                            </p>
+                        </div>
+                        <div class="cap-card" style="margin-bottom: 20px; padding: 30px;">
+                            <h4 style="color: var(--feat-neon-gold); margin-bottom: 8px;">Dynamic Cycle Management</h4>
+                            <p style="font-size: 0.9rem; margin:0;">Automatically schedules "wash-out" periods to
+                                prevent tolerance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <!-- Abstract Neural Visual -->
+                    <svg style="width: 100%; max-width: 400px; height: auto;" viewBox="0 0 400 400">
+                        <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(184,156,99,0.5)" stroke-width="2" />
+                        <g class="neural-nodes">
+                            <circle cx="200" cy="50" r="8" fill="var(--feat-neon-gold)" />
+                            <circle cx="350" cy="200" r="8" fill="var(--feat-neon-gold)" />
+                            <circle cx="200" cy="350" r="8" fill="var(--feat-neon-gold)" />
+                            <circle cx="50" cy="200" r="8" fill="var(--feat-neon-gold)" />
+                            <circle cx="200" cy="200" r="12" fill="var(--feat-neon-gold)" />
+                        </g>
+                        <line x1="200" y1="50" x2="200" y2="200" stroke="var(--feat-neon-gold)" stroke-width="2.5"
+                            class="neural-line" stroke-opacity="1" />
+                        <line x1="350" y1="200" x2="200" y2="200" stroke="var(--feat-neon-gold)" stroke-width="2.5"
+                            class="neural-line" stroke-opacity="1" />
+                        <line x1="200" y1="350" x2="200" y2="200" stroke="var(--feat-neon-gold)" stroke-width="2.5"
+                            class="neural-line" stroke-opacity="1" />
+                        <line x1="50" y1="200" x2="200" y2="200" stroke="var(--feat-neon-gold)" stroke-width="2.5"
+                            class="neural-line" stroke-opacity="1" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — AI INSIGHT SYSTEM -->
+        <section class="feat-ai-section">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center;">
+                    <h2 class="section-title">Beyond Simple Logging.</h2>
+                    <p class="section-subtext" style="color: var(--text-muted);">Cogniva AI identifies patterns you
+                        didn't even know existed.</p>
+                </div>
+
+                <div class="ai-comparison">
+                    <div class="ai-card reveal">
+                        <h4 style="margin-bottom: 30px; opacity: 0.5;">Traditional Raw Logs</h4>
+                        <div
+                            style="text-align: left; font-family: monospace; font-size: 0.8rem; background: var(--bg-preview); padding: 20px; border-radius: 12px; color: #ff6b6b; border: 1px solid var(--border-color);">
+                            > 2026-03-02 08:30: L-Theanine 200mg<br>
+                            > 2026-03-02 08:30: Caffeine 100mg<br>
+                            > User Note: "Felt okay."<br><br>
+                            RESULT: INCONCLUSIVE DATA
+                        </div>
+                    </div>
+                    <div class="ai-card ai-card-active reveal" style="transition-delay: 0.2s;">
+                        <h4 style="margin-bottom: 30px; color: var(--feat-neon-gold);">Cogniva AI Synthesis</h4>
+                        <div
+                            style="text-align: left; font-family: monospace; font-size: 0.8rem; background: rgba(184,156,99,0.05); padding: 20px; border-radius: 12px; color: var(--feat-neon-gold); border: 1px solid var(--feat-neon-gold);">
+                            [!] Pattern Identified: Caffeine crash delayed by L-Theanine ratio (1:2).<br>
+                            [!] Peak Flow Detected: 10:45 AM - 01:15 PM.<br>
+                            [!] Recommendation: Shift dose by -30mins for circadian alignment.<br><br>
+                            RESULT: OPTIMIZED STACK PROTOCOL
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — MODULAR STACK BUILDER -->
+        <section class="feat-builder-section reveal">
+            <div class="container showcase-layout">
+                <div class="reveal">
+                    <h2 style="font-size: 3rem; margin-bottom: 24px;">Built for the Modular Mind.</h2>
+                    <p style="margin-bottom: 40px;">Our stack builder is asymmetric, fluid, and
+                        infinite. Design your cognitive profile one block at a time.</p>
+                    <a href="register.html" class="btn btn-gold">Open Builder</a>
+                </div>
+
+                <div class="builder-perspective" style="height: 400px;">
+                    <div class="cap-card">
+                        <h4>The "Flow" Morning Protocol</h4>
+                        <p style="font-size: 0.85rem; margin-top: 10px;">L-Theanine + Rhodiola Rosea</p>
+                    </div>
+                    <div class="cap-card">
+                        <h4>Deep Work Sprints</h4>
+                        <p style="font-size: 0.85rem; margin-top: 10px;">Alpha-GPC + Noopept</p>
+                    </div>
+                    <div class="cap-card">
+                        <h4>Circadian Reset (Night)</h4>
+                        <p style="font-size: 0.85rem; margin-top: 10px;">Magnesium Glycinate + Apigenin</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6 — PERFORMANCE & SECURITY LAYER -->
+        <section class="feat-security-section reveal">
+            <div class="container">
+                <div class="sec-blocks">
+                    <div class="sec-block reveal">
+                        <h3>Bank-Level Security</h3>
+                        <p>Your physiological data is encrypted with AES-256 at rest and in transit. We never sell your
+                            data.</p>
+                    </div>
+                    <div class="sec-block reveal" style="transition-delay: 0.1s;">
+                        <h3>Low-Latency Mirror</h3>
+                        <p>Global edge nodes ensure your logs sync instantly across all devices, even offline.</p>
+                    </div>
+                    <div class="sec-block reveal" style="transition-delay: 0.2s;">
+                        <h3>Clinical Accuracy</h3>
+                        <p>Our database is cross-referenced with peer-reviewed research for ultimate reliability.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 100px; text-align: center;">
+                    <h2 style="font-family: 'Cormorant Garamond'; font-style: italic; font-size: 2.5rem;">The
+                        Architecture of Clarity.</h2>
+                    <p style="margin-bottom: 40px;">Ready to see what you're capable of?</p>
+                    <a href="register.html" class="btn btn-gold btn-lg">Deploy Your First Stack</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Cogniva Logo"
+                            class="logo-icon"><span>Cogniva</span></a>
+                    <p>The world's first intelligent supplement management platform designed specifically for high
+                        performers seeking mental clarity and long-term cognitive longevity.</p>
+                    <div class="footer-tagline">Elevate Your Mind, Intelligently.</div>
+                </div>
+
+                <!-- Col 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home V1</a></li>
+                        <li><a href="home-v2.html">Home V2</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 40px;">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li
+                                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                                <h4 style="margin-bottom: 12px;">Dashboard</h4>
+                                <ul class="footer-links">
+                                    <li><a href="user-dashboard.html">User Dashboard</a></li>
+                                    <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-newsletter-desc">Get cognitive insights, product updates, and optimization tips
+                        delivered monthly.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold" style="padding: 0 20px; height: 46px;">Join</button>
+                    </form>
+                    <div class="social-icons-footer">
+                        <a href="#" class="icon-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <div class="footer-copyright">© 2026 Cogniva. All rights reserved.</div>
+                    <div class="footer-bottom-centered">
+                        Crafted with ❤️ for cognitive excellence.
+                    </div>
+                    <div class="footer-links" style="display: flex; gap: 20px; font-weight: 500;">
+                        <a href="coming-soon.html">Terms of Service</a>
+                        <span style="opacity: 0.3;">|</span>
+                        <a href="coming-soon.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Magnetic Button Effect
+        const magneticBtns = document.querySelectorAll('.magnetic-btn');
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+    </script>
+</body>
+
+</html>

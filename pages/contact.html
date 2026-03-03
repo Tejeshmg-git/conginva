@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Cogniva - Build Smarter Optimization Together</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Questions, feedback, or partnership inquiries? We're here to help you optimize with clarity. Reach out to the Cogniva team.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Global JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="contact-page">
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                <span>Cogniva</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="../index.html">Home <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="../index.html">Home V1</a>
+                            <a href="home-v2.html">Home V2</a>
+                        </div>
+                    </li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="user-dashboard.html">User Dashboard</a>
+                            <a href="admin-dashboard.html">Admin Dashboard</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="rtl-toggle" title="Switch Direction">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-gold header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1️⃣ HERO SECTION -->
+        <section class="contact-hero">
+            <div class="container reveal">
+                <h1 class="animated-underline">Let’s Build Smarter Optimization Together.</h1>
+                <p class="section-subtext">Questions, feedback, partnerships — we’re here to help you optimize with
+                    clarity.</p>
+                <div class="hero-btns">
+                    <a href="#contact-form" class="btn btn-gold">Contact Support</a>
+                    <a href="coming-soon.html" class="btn btn-outline">Explore Documentation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2️⃣ CONTACT FORM SECTION (Main) -->
+        <section class="contact-main" id="contact-form">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Contact Form -->
+                    <div class="contact-form-container reveal">
+                        <div class="form-header">
+                            <h2>Send us a Message</h2>
+                            <p>Fill out the form below and our team will get back to you shortly.</p>
+                        </div>
+                        <form action="#" class="contact-form">
+                            <div class="form-group floating-label">
+                                <input type="text" id="full-name" class="contact-input" placeholder=" " required>
+                                <label for="full-name">Full Name</label>
+                            </div>
+                            <div class="form-group floating-label">
+                                <input type="email" id="email" class="contact-input" placeholder=" " required>
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry-type">Inquiry Type</label>
+                                <select id="inquiry-type" class="contact-select">
+                                    <option value="general">General Question</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="form-group floating-label">
+                                <textarea id="message" class="contact-textarea" placeholder=" " required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-gold full-width">Send Message</button>
+                            <span class="form-note">We typically respond within 24 hours.</span>
+                        </form>
+                    </div>
+
+                    <!-- Right: Support info card -->
+                    <div class="support-info-card reveal" style="transition-delay: 0.1s;">
+                        <h3>Support Information</h3>
+                        <p>Prefer other ways to connect? Here’s how you can reach our specialized departments.</p>
+
+                        <div class="support-item">
+                            <div class="support-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="support-text">
+                                <h4>Intercom Chat</h4>
+                                <p>Available for Pro users 24/7 for immediate technical assistance.</p>
+                            </div>
+                        </div>
+
+                        <div class="support-item">
+                            <div class="support-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                </svg>
+                            </div>
+                            <div class="support-text">
+                                <h4>Help Center</h4>
+                                <p>Extensive documentation and guides for every Cogniva feature.</p>
+                            </div>
+                        </div>
+
+                        <div class="support-item">
+                            <div class="support-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div class="support-text">
+                                <h4>Community Forum</h4>
+                                <p>Connect with other high performers and share optimization stacks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Location Map Preview -->
+                        <div class="location-map-preview">
+                            <img src="../assets/images/contact/Mapimg.jpeg" alt="Cogniva Office Map">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion (Optional Extra) -->
+                <div class="section-faq-minimal reveal" style="margin-top: 100px;">
+                    <div class="section-header">
+                        <h2 class="animated-underline">Common Questions</h2>
+                    </div>
+                    <div class="faq-minimal-container">
+                        <div class="faq-item-minimal">
+                            <div class="faq-question-minimal">
+                                <span>How long does it take to get a response?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </div>
+                            <div class="faq-answer-minimal">
+                                Our support team typically responds within 24 hours during business days. Pro users
+                                receive priority support with faster turnaround times.
+                            </div>
+                        </div>
+                        <div class="faq-item-minimal">
+                            <div class="faq-question-minimal">
+                                <span>Can I request a custom feature?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </div>
+                            <div class="faq-answer-minimal">
+                                Yes! We love feedback. You can submit feature requests through the "Feedback" inquiry
+                                type in the contact form or via our community forum.
+                            </div>
+                        </div>
+                        <div class="faq-item-minimal">
+                            <div class="faq-question-minimal">
+                                <span>Do you offer enterprise-level partnerships?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </div>
+                            <div class="faq-answer-minimal">
+                                Absolutely. We work with research institutions and wellness companies. Please select
+                                "Partnership" as your inquiry type for specialized attention.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3️⃣ SUPPORT OPTIONS SECTION -->
+        <section class="section-support-options">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="animated-underline">How Can We Help?</h2>
+                    <p class="section-subtext">Select an area to explore specialized resources and direct support
+                        channels.</p>
+                </div>
+                <div class="support-cards-grid">
+                    <div class="support-option-card reveal">
+                        <div class="support-option-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Technical Support</h3>
+                        <p>Dealing with a bug or sync issue? Our engineers are ready to assist you.</p>
+                    </div>
+                    <div class="support-option-card reveal" style="transition-delay: 0.1s;">
+                        <div class="support-option-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h9z"></path>
+                            </svg>
+                        </div>
+                        <h3>Product Guidance</h3>
+                        <p>New to Cogniva? Learn how to structure your first cognitive stack effectively.</p>
+                    </div>
+                    <div class="support-option-card reveal" style="transition-delay: 0.2s;">
+                        <div class="support-option-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Partnership Requests</h3>
+                        <p>Explore collaboration opportunities for research, distribution, or media.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4️⃣ COMPANY INFO SECTION -->
+        <section class="section-company-info">
+            <div class="container">
+                <div class="company-info-grid reveal">
+                    <div class="company-info-item">
+                        <h4>General Support</h4>
+                        <p>support@cogniva.app</p>
+                    </div>
+                    <div class="company-info-item">
+                        <h4>Business inquiries</h4>
+                        <p>partnerships@cogniva.app</p>
+                    </div>
+                    <div class="company-info-item">
+                        <h4>Location</h4>
+                        <p>Remote-first / Global</p>
+                        <span style="font-size: 12px; color: var(--text-muted); opacity: 0.7;">Serving users in 40+
+                            countries</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5️⃣ TRUST SECTION -->
+        <section class="section-trust">
+            <div class="container reveal">
+                <div class="trust-content">
+                    <div class="trust-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h2 class="animated-underline">Your Data, Protected.</h2>
+                    <p>We take privacy as seriously as you take your cognitive performance. All communication is
+                        encrypted, and we have a strict policy: we never sell your data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6️⃣ CTA SECTION -->
+        <section class="contact-cta-wrapper">
+            <div class="container reveal">
+                <h2 class="animated-underline">Ready to Optimize with Structure?</h2>
+                <p>Start free. Build intelligently.</p>
+                <a href="register.html" class="btn btn-gold btn-lg">Create Free Account</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Cogniva Logo"
+                            class="logo-icon"><span>Cogniva</span></a>
+                    <p>The world's first intelligent supplement management platform designed specifically for high
+                        performers seeking mental clarity and long-term cognitive longevity.</p>
+                    <div class="footer-tagline">Elevate Your Mind, Intelligently.</div>
+                </div>
+
+                <!-- Col 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home V1</a></li>
+                        <li><a href="home-v2.html">Home V2</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 40px;">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li
+                                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                                <h4 style="margin-bottom: 12px;">Dashboard</h4>
+                                <ul class="footer-links">
+                                    <li><a href="user-dashboard.html">User Dashboard</a></li>
+                                    <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-newsletter-desc">Get cognitive insights, product updates, and optimization tips
+                        delivered monthly.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold" style="padding: 0 20px; height: 46px;">Join</button>
+                    </form>
+                    <div class="social-icons-footer">
+                        <a href="#" class="icon-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <div class="footer-copyright">© 2026 Cogniva. All rights reserved.</div>
+                    <div class="footer-bottom-centered">
+                        Crafted with ❤️ for cognitive excellence.
+                    </div>
+                    <div class="footer-links" style="display: flex; gap: 20px; font-weight: 500;">
+                        <a href="coming-soon.html">Terms of Service</a>
+                        <span style="opacity: 0.3;">|</span>
+                        <a href="coming-soon.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Minimal Accordion Logic
+        document.querySelectorAll('.faq-question-minimal').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin System | Cogniva SaaS</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <!-- JS -->
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/admin.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="admin-dashboard-page">
+    <div class="admin-layout">
+
+        <!-- 🔹 SIDEBAR -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                    Cogniva <span>ADMIN</span>
+                </a>
+                <button class="admin-icon-btn mobile-toggle" id="admin-mobile-close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="admin-sidebar-content">
+                <div class="admin-nav-group">
+                    <div class="admin-nav-label">MAIN</div>
+                    <a href="#overview" class="admin-nav-link active">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" border-radius="2" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                        <span>Overview</span>
+                    </a>
+                    <a href="#analytics" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <span>Analytics</span>
+                    </a>
+                    <a href="#reports" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>Reports</span>
+                    </a>
+                </div>
+
+                <div class="admin-nav-group">
+                    <div class="admin-nav-label">MANAGEMENT</div>
+                    <a href="#users" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>Users Table</span>
+                    </a>
+                    <a href="#stacks" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>Stacks Management</span>
+                    </a>
+                    <a href="#moderation" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span>Comm. Moderation</span>
+                    </a>
+                </div>
+
+                <div class="admin-nav-group">
+                    <div class="admin-nav-label">SYSTEM</div>
+                    <a href="#health" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                        <span>System Health</span>
+                    </a>
+                    <a href="#settings" class="admin-nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        <span>Global Settings</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="admin-sidebar-overlay"></div>
+
+        <!-- 🔹 MAIN CONTENT WRAPPER -->
+        <main class="admin-main">
+            <!-- TOP NAVBAR -->
+            <header class="admin-topbar">
+                <div class="admin-topbar-left">
+                    <button class="admin-icon-btn mobile-toggle" id="admin-mobile-toggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="admin-breadcrumb">
+                        <span>Admin</span> / <span class="current" id="admin-breadcrumb-current">Global Overview</span>
+                    </div>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <div class="admin-search">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" placeholder="Search system users, stack logs, IDs...">
+                    </div>
+
+                    <button class="admin-icon-btn" id="admin-theme-toggle" title="Toggle Theme">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+                    <button class="admin-icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="admin-badge">9</span>
+                    </button>
+
+                    <div class="admin-profile">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"
+                            alt="Admin" class="admin-profile-img">
+                        <div class="admin-profile-info">
+                            <span class="admin-profile-name">David L.</span>
+                            <span class="admin-profile-role">Super Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-content-wrapper">
+                <!-- 🧠 TAB: OVERVIEW -->
+                <div id="tab-overview" class="tab-pane active">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">Executive Overview</h2>
+                    </div>
+                    <section class="admin-kpi-grid">
+                        <div class="admin-card kpi-card hover-lift">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Total Active Users</span>
+                                <div class="kpi-icon primary">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="kpi-value animate-counter" data-target="152430">0</div>
+                            <div class="kpi-trend positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                    <polyline points="17 6 23 6 23 12"></polyline>
+                                </svg>
+                                <span>+4.2% Growth</span>
+                            </div>
+                        </div>
+                        <div class="admin-card kpi-card hover-lift">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Avg Focus Score</span>
+                                <div class="kpi-icon warning">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="kpi-value animate-counter" data-target="82">0</div>
+                            <div class="kpi-trend positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                </svg>
+                                <span>Optimal Levels</span>
+                            </div>
+                        </div>
+                        <div class="admin-card kpi-card hover-lift">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Server Status</span>
+                                <div class="kpi-icon success">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="kpi-value">99.9%</div>
+                            <div class="kpi-trend positive">
+                                <span>All Systems Up</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="admin-split-grid">
+                        <div class="admin-card">
+                            <h3 class="admin-section-title" style="margin-bottom: 20px;">Recent Activity</h3>
+                            <div class="chart-placeholder">Growth Chart Placeholder</div>
+                        </div>
+                        <div class="admin-card">
+                            <h3 class="admin-section-title" style="margin-bottom: 20px;">System Health</h3>
+                            <div class="health-item">
+                                <div class="health-name">
+                                    <div class="health-indicator good"></div> Database
+                                </div>
+                                <span>Online</span>
+                            </div>
+                            <div class="health-item">
+                                <div class="health-name">
+                                    <div class="health-indicator good"></div> API
+                                </div>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 📊 TAB: ANALYTICS -->
+                <div id="tab-analytics" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">Advanced Analytics</h2>
+                    </div>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title" style="margin-bottom: 24px;">Global User Growth</h3>
+                        <div class="chart-placeholder" style="height: 400px;">[ Detailed Analytics Chart ]</div>
+                    </div>
+                </div>
+
+                <!-- 📄 TAB: REPORTS -->
+                <div id="tab-reports" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">System Reports</h2>
+                    </div>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title">Available Reports</h3>
+                        <p>Generate and analyze periodic system performance reports.</p>
+                        <button class="admin-btn primary">Download Monthly Digest</button>
+                    </div>
+                </div>
+
+                <!-- 👥 TAB: USERS -->
+                <div id="tab-users" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">User Directory</h2>
+                    </div>
+                    <div class="admin-card">
+                        <div class="admin-table-actions">
+                            <h3 class="admin-section-title">Management</h3>
+                            <div class="table-filters">
+                                <select class="admin-select">
+                                    <option>All Users</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="admin-table-container">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Plan</th>
+                                        <th>Active</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sarah Jenkins</td>
+                                        <td>Pro</td>
+                                        <td>2 hrs ago</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                        <td><button class="admin-btn">Edit</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🧪 TAB: STACKS -->
+                <div id="tab-stacks" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">Stacks Management</h2>
+                    </div>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title">Supplement Stack Distribution</h3>
+                        <div class="stack-bar">
+                            <div class="stack-item"><span>Nootropics</span>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 📣 TAB: MODERATION -->
+                <div id="tab-moderation" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">Community Moderation</h2>
+                    </div>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title">Moderation Queue</h3>
+                        <div class="mod-item">
+                            <div class="mod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                    </path>
+                                </svg></div>
+                            <div class="mod-details">
+                                <h4>Harmful Compound Flagged</h4>
+                                <p>User ID: 41092 logged extreme substances.</p>
+                                <button class="admin-btn danger">Take Action</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🚨 TAB: HEALTH -->
+                <div id="tab-health" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">System Health</h2>
+                    </div>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title">Real-time Infrastructure Monitoring</h3>
+                        <div class="health-item"><span>Primary DB</span><span class="status-badge active">Online</span>
+                        </div>
+                        <div class="health-item"><span>API Gateway</span><span class="status-badge active">Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ⚙️ TAB: SETTINGS -->
+                <div id="tab-settings" class="tab-pane">
+                    <div class="admin-section-header">
+                        <h2 class="admin-section-title">Global Settings</h2>
+                    </div>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title">Configuration</h3>
+                        <p>Modify system-wide parameters and admin access controls.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
+
+
+

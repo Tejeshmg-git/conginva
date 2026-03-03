@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cogniva | Elevate Your Mind, Intelligently</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Track supplements, stay consistent, and improve focus with Cogniva. The intelligent platform for cognitive enhancement.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Global JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body class="home-v1">
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                <span>Cogniva</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html" class="active">Home <svg class="chevron" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="index.html">Home V1</a>
+                            <a href="pages/home-v2.html">Home V2</a>
+                        </div>
+                    </li>
+                    <li><a href="pages/features.html">Features</a></li>
+                    <li><a href="pages/pricing.html">Pricing</a></li>
+                    <li><a href="pages/blog.html">Blog</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="pages/user-dashboard.html">User Dashboard</a>
+                            <a href="pages/admin-dashboard.html">Admin Dashboard</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="rtl-toggle" title="Switch Direction (LTR / RTL)">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    </svg>
+                </button>
+                <a href="pages/register.html" class="btn btn-gold header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Elevate Your Mind, Intelligently.</h1>
+                <p>Track supplements. Stay consistent. Improve focus.</p>
+                <div class="hero-btns">
+                    <a href="pages/register.html" class="btn btn-gold btn-lg">Get Started</a>
+                    <a href="pages/coming-soon.html" class="btn btn-outline btn-lg"
+                        style="border-color: #fff; color: #fff;">View Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-how" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtext section-subtitle">From setup to optimization, Cogniva guides your cognitive
+                    journey in four
+                    simple steps.</p>
+            </div>
+            <div class="grid-4">
+                <div class="card">
+                    <h3>Choose Supplements</h3>
+                    <p>Select from our extensive database of nootropics and supplements tailored to your needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Log Daily Intake</h3>
+                    <p>Easily log your daily consumption and maintain a consistent cognitive routine.</p>
+                </div>
+                <div class="card">
+                    <h3>Track Your Progress</h3>
+                    <p>Visualize your performance trends and understand the impact of your protocol.</p>
+                </div>
+                <div class="card">
+                    <h3>Optimize & Improve</h3>
+                    <p>Refine your stack using insights and data-driven cognitive adjustments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlight Grid Section -->
+    <section class="section-features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Features</h2>
+                <p class="section-subtext section-subtitle">Everything you need to manage, track, and elevate your
+                    cognitive performance
+                    in one intelligent platform.</p>
+            </div>
+            <div class="grid-3-desktop">
+                <div class="card feature-card">
+                    <h3>Smart Stack Tracking</h3>
+                    <p>Intelligent management of your supplement schedules and dosages.</p>
+                </div>
+                <div class="card feature-card">
+                    <div class="pro-badge">
+                        PRO</div>
+                    <h3>Visual Progress Insights</h3>
+                    <p>Deep analytics and data visualization to map your cognitive evolution.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Structured Community Forum</h3>
+                    <p>Connect with high performers and share research-backed optimization protocols.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Beginner-Friendly Simplicity</h3>
+                    <p>A streamlined interface designed to get you started without overcomplicating the journey.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Intelligent Reminders</h3>
+                    <p>Never miss a dose with smart reminders tailored to your routine.</p>
+                </div>
+                <div class="card feature-card">
+                    <h3>Data Export & Reports</h3>
+                    <p>Download detailed reports to analyze long-term performance trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section class="section-preview" id="dashboard-preview">
+        <div class="container preview-container">
+            <div class="section-header reveal">
+                <span class="eyebrow"
+                    style="color: var(--gold-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 16px; display: block;">Platform
+                    Vision</span>
+                <h2 class="section-title">Your Cognitive Progress, Simplified.</h2>
+                <p class="section-subtext section-subtitle">A high-level overview of your mental architecture and
+                    supplement efficacy.</p>
+            </div>
+
+            <div class="dashboard-preview-wrapper reveal" style="transition-delay: 0.1s;">
+                <!-- Decorative Glow -->
+                <div class="preview-glow"></div>
+
+                <!-- Main Image -->
+                <img src="assets/images/homev1/DashboardPreviewSection.jpg"
+                    alt="Cogniva cognitive tracking dashboard overview" loading="lazy" class="dashboard-preview-img">
+
+                <!-- Floating Elements -->
+                <div class="floating-ui f-ui-top">
+                    <div class="ui-dot"></div>
+                    <span>Optimized Focus Peak</span>
+                </div>
+
+                <div class="floating-ui f-ui-bottom">
+                    <div class="ui-chart-mini">
+                        <div class="bar" style="height: 40%"></div>
+                        <div class="bar" style="height: 70%"></div>
+                        <div class="bar" style="height: 50%"></div>
+                        <div class="bar" style="height: 90%"></div>
+                    </div>
+                    <span>+24% Weekly Baseline</span>
+                </div>
+
+                <div class="floating-ui f-ui-side">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M12 2v20M2 12h20" />
+                    </svg>
+                    <span>Smart Stack AI Active</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Impact Section -->
+    <section class="trust-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted by High Performers</h2>
+                <p class="section-subtext section-subtitle">Thousands of users track, optimize, and elevate their
+                    cognitive performance with Cogniva.</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <span class="stat-number">10,000+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">User Satisfaction</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number">250K+</span>
+                    <span class="stat-label">Supplements Logged</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-quote">“I finally understand what works for my focus. The tracking insights
+                        are game-changing.”</p>
+                    <div class="testimonial-author">— Rahul M., Software Engineer</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-quote">“Simple enough for beginners, powerful enough to grow with you.”</p>
+                    <div class="testimonial-author">— Ananya K., Medical Student</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview Section -->
+    <section class="section-pricing pricing-section home-pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pricing</h2>
+                <p class="section-subtext section-subtitle">Choose a plan that fits your cognitive optimization journey.
+                    Upgrade anytime
+                    as your needs grow.</p>
+            </div>
+            <div class="pricing-grid grid-2x2">
+                <div class="card price-card pricing-card">
+                    <h3>Free Plan</h3>
+                    <ul class="price-features">
+                        <li>Up to 3 supplements</li>
+                        <li>Basic tracking</li>
+                        <li>Forum access</li>
+                    </ul>
+                    <a href="pages/register.html" class="btn btn-outline full-width">Current Plan</a>
+                </div>
+                <div class="card price-card pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro Plan</h3>
+                    <ul class="price-features">
+                        <li>Unlimited supplements</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="pages/register.html" class="btn btn-gold full-width">Upgrade to Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section-cta cta-section">
+        <div class="container">
+            <div class="cta-container">
+                <h2>Ready to Unlock Your Cognitive Potential?</h2>
+                <p>Join thousands of high performers optimizing their focus, clarity, and long-term mental performance
+                    with Cogniva.</p>
+                <div class="cta-btns">
+                    <a href="pages/register.html" class="btn btn-gold btn-lg">Get Started</a>
+                    <a href="pages/pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+                </div>
+                <div class="trust-line">No credit card required • Cancel anytime</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                        <span>Cogniva</span>
+                    </a>
+                    <p>The world's first intelligent supplement management platform designed specifically for high
+                        performers seeking mental clarity and long-term cognitive longevity.</p>
+                    <div class="footer-tagline">Elevate Your Mind, Intelligently.</div>
+                </div>
+
+                <!-- Col 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home V1</a></li>
+                        <li><a href="pages/home-v2.html">Home V2</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="pages/pricing.html">Pricing</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 40px;">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="pages/about.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact</a></li>
+                            <li><a href="pages/404.html">404 Error</a></li>
+                            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                            <li style="margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                                <h4 style="margin-bottom: 12px;">Dashboard</h4>
+                                <ul class="footer-links">
+                                    <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+                                    <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-newsletter-desc">Get cognitive insights, product updates, and optimization tips
+                        delivered monthly.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold" style="padding: 0 20px; height: 46px;">Join</button>
+                    </form>
+                    <div class="social-icons-footer">
+                        <a href="#" class="icon-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <div class="footer-copyright">© 2026 Cogniva. All rights reserved.</div>
+                    <div class="footer-bottom-centered">
+                        Crafted with ❤️ for cognitive excellence.
+                    </div>
+                    <div class="footer-links" style="display: flex; gap: 20px; font-weight: 500;">
+                        <a href="pages/coming-soon.html">Terms of Service</a>
+                        <span style="opacity: 0.3;">|</span>
+                        <a href="pages/coming-soon.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

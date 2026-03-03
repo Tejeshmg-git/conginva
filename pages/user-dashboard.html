@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | Cogniva</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Your personal cognitive control center. Track supplements, analyze trends, and engage with the community.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <!-- Global JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+
+        <!-- 🔹 SIDEBAR -->
+        <aside class="dashboard-sidebar" id="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                    Cogniva
+                    <span
+                        style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-inter); font-weight: 500; color: var(--gold-accent); border: 1px solid var(--gold-accent); padding: 2px 6px; border-radius: 4px; line-height: 1;">User
+                        OS</span>
+                </a>
+                <button class="icon-btn mobile-menu-close" id="mobile-sidebar-close" aria-label="Close sidebar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#overview" class="sidebar-link active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span>Overview</span>
+                </a>
+                <a href="#stack" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>My Stack</span>
+                </a>
+                <a href="#biometrics" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <span>Biometrics</span>
+                </a>
+                <a href="#insights" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Insights</span>
+                </a>
+                <a href="#challenges" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                    <span>Challenges</span>
+                </a>
+                <a href="#community" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Community</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <a href="#settings" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+                <a href="../index.html" class="sidebar-link text-danger">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- 🔹 MAIN CONTENT -->
+        <div class="dashboard-main">
+            <!-- 🔹 TOP BAR -->
+            <div class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button class="icon-btn mobile-menu-toggle" id="mobile-sidebar-open" aria-label="Open sidebar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <h2 class="page-title">Personal Control Center</h2>
+                </div>
+
+                <div class="topbar-right">
+                    <button class="icon-btn" id="rtl-toggle" title="Switch Direction">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn notification-btn" aria-label="Notifications">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="avatar">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80"
+                                alt="User Profile">
+                        </div>
+                        <div class="profile-dropdown-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- 🧠 TAB 1 — OVERVIEW -->
+                <div id="tab-overview" class="tab-pane active">
+                    <div class="section-header" style="margin-bottom: 12px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Dashboard Overview</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Your daily cognitive snapshot.</p>
+                    </div>
+                    <section id="overview" class="dashboard-section metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3 class="metric-title">Focus Score</h3>
+                                <div class="metric-icon"
+                                    style="color: var(--gold-accent); background: rgba(191,164,111,0.1);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">84<span>/100</span></div>
+                            <div class="metric-trend positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                    <polyline points="17 6 23 6 23 12"></polyline>
+                                </svg>
+                                <span>+4.2%</span> from last week
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3 class="metric-title">Consistency Streak</h3>
+                                <div class="metric-icon" style="color: #2ecc71; background: rgba(46,204,113,0.1);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">12<span> Days</span></div>
+                            <div class="metric-trend neutral">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                <span>Maintained</span> personal best
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3 class="metric-title">Active Supplements</h3>
+                                <div class="metric-icon" style="color: #3498db; background: rgba(52,152,219,0.1);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">4<span> Items</span></div>
+                            <div class="metric-trend neutral">
+                                <span>Stack stable</span> since last month
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3 class="metric-title">Weekly Performance</h3>
+                                <div class="metric-icon" style="color: #9b59b6; background: rgba(155,89,182,0.1);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">Top 15%</div>
+                            <div class="metric-trend positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                    <polyline points="17 6 23 6 23 12"></polyline>
+                                </svg>
+                                <span>Optimized</span> schedule alignment
+                            </div>
+                        </div>
+                    </section>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; margin-top: 32px;">
+                        <section class="dashboard-section challenge-card dashboard-widget">
+                            <div class="challenge-badge">Active Event</div>
+                            <h3>7-Day Consistency Challenge</h3>
+                            <p>Maintain your daily protocol without missing a log.</p>
+
+                            <div class="progress-wrapper">
+                                <div class="progress-labels">
+                                    <span>Progress</span>
+                                    <span>71% (Day 5/7)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 71%;"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline full-width mt-3"
+                                onclick="alert('Redirecting to Challenge Dashboard...')">View Challenge Details</button>
+                        </section>
+                        <section class="reminder-card dashboard-widget">
+                            <h3>Next Intake</h3>
+                            <div class="reminder-content">
+                                <div class="reminder-time">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    01:30 PM
+                                </div>
+                                <div class="reminder-detail">
+                                    <h4>Alpha-GPC + Noopept</h4>
+                                    <p>Mid-day focus block</p>
+                                </div>
+                                <div class="reminder-actions">
+                                    <button class="btn btn-gold btn-sm"
+                                        onclick="this.innerHTML='✓ Logged'; this.style.backgroundColor='#2ecc71'; this.style.borderColor='#2ecc71'; this.style.color='white';">Log
+                                        Taken</button>
+                                    <button class="btn btn-outline btn-sm"
+                                        onclick="this.innerHTML='Snoozed 15m'">Snooze</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- 💊 TAB 2 — MY STACK -->
+                <div id="tab-stack" class="tab-pane">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">My Supplement Stack</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Manage your customized daily protocols.
+                        </p>
+                    </div>
+                    <section id="stack" style="max-width: 800px; margin: 0 auto;"
+                        class="dashboard-section stack-summary-section dashboard-widget">
+                        <div class="card-header-flex">
+                            <h3>My Stack Summary</h3>
+                            <button class="btn btn-gold btn-sm" onclick="alert('Opening Add Supplement Modal...')">Quick
+                                Add +</button>
+                        </div>
+                        <div class="stack-list">
+                            <!-- Stack Item -->
+                            <div class="stack-row">
+                                <div class="stack-info">
+                                    <div class="pill-icon">💊</div>
+                                    <div>
+                                        <h4>L-Theanine & Caffeine</h4>
+                                        <p>Morning Protocol</p>
+                                    </div>
+                                </div>
+                                <div class="stack-dose">200mg / 100mg</div>
+                                <div class="stack-time">08:00 AM</div>
+                                <div class="stack-status active-status">Active</div>
+                            </div>
+                            <!-- Stack Item -->
+                            <div class="stack-row">
+                                <div class="stack-info">
+                                    <div class="pill-icon">🧪</div>
+                                    <div>
+                                        <h4>Alpha-GPC</h4>
+                                        <p>Deep Focus Phase</p>
+                                    </div>
+                                </div>
+                                <div class="stack-dose">300mg</div>
+                                <div class="stack-time">01:30 PM</div>
+                                <div class="stack-status pending-status">Upcoming</div>
+                            </div>
+                            <!-- Stack Item -->
+                            <div class="stack-row">
+                                <div class="stack-info">
+                                    <div class="pill-icon">🌿</div>
+                                    <div>
+                                        <h4>Magnesium Glycinate</h4>
+                                        <p>Sleep Architecture</p>
+                                    </div>
+                                </div>
+                                <div class="stack-dose">400mg</div>
+                                <div class="stack-time">09:30 PM</div>
+                                <div class="stack-status pending-status">Upcoming</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 🧬 TAB 3 — BIOMETRICS -->
+                <div id="tab-biometrics" class="tab-pane">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Biometrics Data</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Sync and analyze physiological metrics.
+                        </p>
+                    </div>
+                    <section id="biometrics" class="dashboard-section dashboard-widget"
+                        style="max-width: 600px; margin: 0 auto; text-align: center; padding: 48px 24px;">
+                        <div class="metric-icon"
+                            style="margin: 0 auto 16px; color: var(--gold-accent); background: rgba(191,164,111,0.1); width: 64px; height: 64px; border-radius: 16px;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Biometrics Sync</h3>
+                        <p class="text-muted" style="line-height: 1.6; max-width: 400px; margin: 16px auto;">Connect
+                            your
+                            Oura Ring, Whoop, or Apple Watch to start tracking your physiological data seamlessly here.
+                        </p>
+                        <button class="btn btn-gold">Connect Device</button>
+                    </section>
+                </div>
+
+                <!-- 📊 TAB 4 — INSIGHTS -->
+                <div id="tab-insights" class="tab-pane">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Cognitive Insights</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Track long-term performance trends.</p>
+                    </div>
+                    <section id="insights" class="dashboard-section dashboard-chart-section">
+                        <div class="card-header-flex">
+                            <h3>Cognitive Trend <span>(Last 30 Days)</span></h3>
+                            <div class="chart-toggle">
+                                <span class="toggle-btn">Week</span>
+                                <span class="toggle-btn active">Month</span>
+                                <span class="toggle-btn">Quarter</span>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <!-- Static UI placeholder for line chart -->
+                            <svg class="ui-chart-placeholder" viewBox="0 0 800 250" preserveAspectRatio="none">
+                                <path
+                                    d="M0 220 C 50 220, 100 150, 200 160 C 300 170, 350 100, 450 120 C 550 140, 600 50, 700 80 C 750 95, 800 60, 800 60 L 800 250 L 0 250 Z"
+                                    class="chart-area" fill="rgba(191,164,111,0.1)"></path>
+                                <path
+                                    d="M0 220 C 50 220, 100 150, 200 160 C 300 170, 350 100, 450 120 C 550 140, 600 50, 700 80 C 750 95, 800 60, 800 60"
+                                    class="chart-line" fill="none" stroke="var(--gold-accent)" stroke-width="3">
+                                </path>
+                                <!-- Plot points -->
+                                <circle cx="200" cy="160" r="5" fill="var(--bg-body)" stroke="var(--gold-accent)"
+                                    stroke-width="2" class="chart-point" />
+                                <circle cx="450" cy="120" r="5" fill="var(--bg-body)" stroke="var(--gold-accent)"
+                                    stroke-width="2" class="chart-point" />
+                                <circle cx="700" cy="80" r="5" fill="var(--bg-body)" stroke="var(--gold-accent)"
+                                    stroke-width="2" class="chart-point" />
+                            </svg>
+                            <!-- Grid lines -->
+                            <div class="chart-grid-lines">
+                                <div class="grid-line"><span>100</span></div>
+                                <div class="grid-line"><span>75</span></div>
+                                <div class="grid-line"><span>50</span></div>
+                                <div class="grid-line"><span>25</span></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 🏆 TAB 5 — CHALLENGES -->
+                <div id="tab-challenges" class="tab-pane">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Active Challenges</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Join events to maintain consistency.</p>
+                    </div>
+                    <section id="challenges" style="max-width: 600px; margin: 0 auto;"
+                        class="dashboard-section challenge-card dashboard-widget">
+                        <div class="challenge-badge">Active Event</div>
+                        <h3>7-Day Consistency Challenge</h3>
+                        <p>Maintain your daily protocol without missing a log.</p>
+
+                        <div class="progress-wrapper">
+                            <div class="progress-labels">
+                                <span>Progress</span>
+                                <span>71% (Day 5/7)</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 71%;"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline full-width mt-3"
+                            onclick="alert('Redirecting to Challenge Dashboard...')">View Challenge Details</button>
+                    </section>
+                </div>
+
+                <!-- 🧩 TAB 6 — COMMUNITY -->
+                <div id="tab-community" class="tab-pane">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Community Pulse</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Engage in real-time protocol discussions.
+                        </p>
+                    </div>
+                    <section id="community" style="max-width: 800px; margin: 0 auto;"
+                        class="dashboard-section community-snapshot-section dashboard-widget">
+                        <div class="card-header-flex">
+                            <h3>Community Pulse</h3>
+                            <a href="../pages/blog.html" class="view-all">Forum →</a>
+                        </div>
+                        <div class="community-list">
+                            <a href="../pages/blog.html" class="community-card">
+                                <h4>Best protocols for evening wind-down without grogginess?</h4>
+                                <div class="community-meta">
+                                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg> 24 replies</span>
+                                    <span>2 hrs ago</span>
+                                </div>
+                            </a>
+                            <a href="../pages/blog.html" class="community-card">
+                                <h4>Rhodiola Rosea cycling strategies to prevent tolerance build-up.</h4>
+                                <div class="community-meta">
+                                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg> 18 replies</span>
+                                    <span>5 hrs ago</span>
+                                </div>
+                            </a>
+                            <a href="../pages/blog.html" class="community-card">
+                                <h4>Lion's Mane source quality differences observed in the last month.</h4>
+                                <div class="community-meta">
+                                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg> 45 replies</span>
+                                    <span>1 day ago</span>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ⚙️ TAB 7 — SETTINGS -->
+                <div id="tab-settings" class="tab-pane">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Account Settings</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">Manage your profile and preferences.</p>
+                    </div>
+                    <section id="settings" class="dashboard-section dashboard-widget"
+                        style="max-width: 800px; margin: 0 auto;">
+                        <h3
+                            style="margin-bottom: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 16px;">
+                            Account Settings</h3>
+
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4 style="margin-bottom: 4px;">Profile Information</h4>
+                                    <p class="text-muted" style="font-size: 13px;">Update your email, name, and avatar.
+                                    </p>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Edit</button>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4 style="margin-bottom: 4px;">Notification Preferences</h4>
+                                    <p class="text-muted" style="font-size: 13px;">Manage intake reminders and community
+                                        alerts.</p>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Manage</button>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4 style="margin-bottom: 4px;">Billing & Subscription</h4>
+                                    <p class="text-muted" style="font-size: 13px;">Manage your premium membership.</p>
+                                </div>
+                                <button class="btn btn-outline btn-sm">View</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple Sidebar Toggle for Mobile
+        const sidebar = document.getElementById('dashboard-sidebar');
+        const openBtn = document.getElementById('mobile-sidebar-open');
+        const closeBtn = document.getElementById('mobile-sidebar-close');
+
+        if (openBtn && closeBtn && sidebar) {
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('mobile-open');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('mobile-open');
+            });
+        }
+
+        // --- DASHBOARD TAB NAVIGATION ---
+        const navLinks = document.querySelectorAll(".sidebar-link");
+        const tabPanes = document.querySelectorAll(".tab-pane");
+        const pageTitle = document.querySelector(".page-title");
+
+
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                // Ignore logout link
+                if (link.classList.contains("text-danger")) return;
+
+                e.preventDefault();
+
+                const targetId = link.getAttribute("href").substring(1);
+
+                // Update nav state
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                link.classList.add("active");
+
+                // Update tabs
+                tabPanes.forEach(pane => {
+                    pane.classList.remove("active");
+                    if (pane.id === "tab-" + targetId) {
+                        pane.classList.add("active");
+                    }
+                });
+
+                // Close sidebar on mobile
+                if (sidebar) {
+                    sidebar.classList.remove("mobile-open");
+                }
+
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+</body>
+
+</html>

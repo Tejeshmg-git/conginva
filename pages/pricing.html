@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cogniva | Simple Pricing, Intelligent Growth</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Choose the perfect plan for your cognitive optimization journey. From beginners to performance professionals, Cogniva has a plan for you.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Global JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="v2-page pricing-page">
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                <span>Cogniva</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="../index.html">Home <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="../index.html">Home V1</a>
+                            <a href="home-v2.html">Home V2</a>
+                        </div>
+                    </li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html" class="active">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="user-dashboard.html">User Dashboard</a>
+                            <a href="admin-dashboard.html">Admin Dashboard</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="rtl-toggle" title="Switch Direction">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-gold header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1 — PRICING HERO + TOGGLE -->
+        <section class="pricing-hero">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h1 class="hero-title">Simple Pricing. Intelligent Growth.</h1>
+                    <p class="section-subtext">
+                        Start free. Upgrade as your stack evolves.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PRICING PLANS -->
+        <section class="pricing-plans-section">
+            <div class="container">
+                <!-- Advanced Pricing Toggle -->
+                <div class="pricing-toggle-wrapper reveal" style="margin-bottom: 80px;">
+                    <div class="toggle-bg" id="toggle-indicator"></div>
+                    <span class="toggle-label active" data-period="monthly">Monthly</span>
+                    <span class="toggle-label" data-period="yearly">Yearly</span>
+
+                    <div class="save-badge">
+                        Save 20%
+                    </div>
+                </div>
+
+                <!-- Plans Grid -->
+                <div class="pricing-plans-grid">
+                    <!-- Starter -->
+                    <div class="price-card reveal">
+                        <div class="card-tier">Starter</div>
+                        <div class="card-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="0" data-yearly="0">0</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="card-desc">For those just beginning their cognitive journey.</p>
+                        <ul class="card-features">
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Up to 5 Supplements</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Basic Daily Tracking</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Community Access</li>
+                            <li class="disabled"><svg class="icon-cross" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="3">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg> AI Pattern Recognition</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-outline full-width">Get Started</a>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="price-card featured reveal">
+                        <div class="popular-badge">Elite Performance</div>
+                        <div class="card-tier" style="background: var(--feat-neon-gold); color: white;">Pro</div>
+                        <div class="card-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="19" data-yearly="15">19</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="card-desc" style="color: var(--text-main); font-weight: 600;">Advanced tracking for
+                            serious biohackers.</p>
+                        <ul class="card-features">
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Unlimited Supplements</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Full AI Insights Engine</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Real-time Synthesis</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Priority Email Support</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-gold full-width">Unlock Pro</a>
+                    </div>
+
+                    <!-- Elite -->
+                    <div class="price-card reveal" style="transition-delay: 0.2s;">
+                        <div class="card-tier">Elite</div>
+                        <div class="card-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="49" data-yearly="39">49</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="card-desc">Concierge-level data for professionals.</p>
+                        <ul class="card-features">
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Everything in Pro</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Custom Lab Integration</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Personalized Reports</li>
+                            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> 24/7 Dedicated Support</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-outline full-width">Go Elite</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 — PLAN COMPARISON MATRIX -->
+        <section class="pricing-matrix-section reveal">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="section-title">Compare Every Detail.</h2>
+                </div>
+
+                <div class="matrix-table-wrapper">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th class="feature-col">Feature</th>
+                                <th>Starter</th>
+                                <th>Pro</th>
+                                <th>Elite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-col">Supplements limit</td>
+                                <td>5</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">AI Insights</td>
+                                <td>Basic</td>
+                                <td class="check">⚡</td>
+                                <td class="check">⚡</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Real-time tracking</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Advanced synthesis</td>
+                                <td class="cross">✕</td>
+                                <td class="check">⚡</td>
+                                <td class="check">⚡</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Community access</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Support tier</td>
+                                <td>Community</td>
+                                <td>Priority</td>
+                                <td>Concierge</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Export data</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-col">Custom reports</td>
+                                <td class="cross">✕</td>
+                                <td class="cross">✕</td>
+                                <td class="check">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 — FEATURE VALUE BREAKDOWN -->
+        <section class="pricing-value-section">
+            <div class="container">
+                <div class="value-split reveal">
+                    <div class="value-col before">
+                        <h3>Limited Tracking</h3>
+                        <p class="col-subtitle">What you get without insights.</p>
+                        <div class="value-card">
+                            <ul class="value-list">
+                                <li>Fragmented data logs</li>
+                                <li>Unknown supplement interactions</li>
+                                <li>Inconsistent sleep patterns</li>
+                                <li>High metabolic guess-work</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="value-divider">
+                        <div class="vs-badge">VS</div>
+                    </div>
+                    <div class="value-col after">
+                        <h3>Pro Insights Unlocked</h3>
+                        <p class="col-subtitle">The power of cognitive engineering.</p>
+                        <div class="value-card">
+                            <ul class="value-list">
+                                <li class="highlight">Pattern-based dose optimization</li>
+                                <li class="highlight">Real-time bio-feedback loops</li>
+                                <li class="highlight">Automated tolerance cycling</li>
+                                <li class="highlight">Direct lab-to-log correlation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — USE-CASE PLANS -->
+        <section class="pricing-usecase-section">
+            <div class="container reveal">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="section-title">Designed for Your Ambition.</h2>
+                </div>
+
+                <div class="usecase-grid">
+                    <div class="usecase-item">
+                        <div class="usecase-icon">🌱</div>
+                        <h4>Beginners</h4>
+                        <p>Perfect for those exploring nootropics for the first time.</p>
+                        <div class="usecase-plan">Recommended: <strong>Starter</strong></div>
+                        <a href="register.html" class="btn btn-link">Start Free <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
+                    </div>
+                    <div class="usecase-item">
+                        <div class="usecase-icon">🧬</div>
+                        <h4>Biohackers</h4>
+                        <p>Built for users managing complex stacks and performance metrics.</p>
+                        <div class="usecase-plan">Recommended: <strong>Pro</strong></div>
+                        <a href="register.html" class="btn btn-link">Unlock Pro <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
+                    </div>
+                    <div class="usecase-item">
+                        <div class="usecase-icon">🏆</div>
+                        <h4>Performance Pros</h4>
+                        <p>Enterprise-grade security and personalized data for top-tier performers.</p>
+                        <div class="usecase-plan">Recommended: <strong>Elite</strong></div>
+                        <a href="register.html" class="btn btn-link">Go Elite <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — FAQ (Objection Handling) -->
+        <section class="pricing-faq-section reveal">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            Can I cancel my subscription anytime?
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>Yes, absolutely. You can cancel your subscription at any time directly from your
+                                dashboard. Your access will continue until the end of your current billing period.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            Is my data secure and private?
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>Data security is our top priority. We use industry-standard AES-256 encryption. We never
+                                sell your personal or physiological data to third parties.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            Do you offer a refund policy?
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>We offer a 14-day money-back guarantee for all our paid plans. If you're not satisfied,
+                                contact our support team within 14 days of upgrade for a full refund.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            Can I switch between plans later?
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>Yes! You can upgrade or downgrade your plan at any time. If you upgrade, the change
+                                happens instantly with a pro-rated charge.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            Do you offer student or veteran discounts?
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>We provide a 30% discount for students and medical professionals. Please email our
+                                support team with your credentials to receive a unique discount code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6 — FINAL CONVERSION CTA -->
+        <section class="pricing-cta-section reveal">
+            <div class="container">
+                <div class="cta-glow-bg"></div>
+                <div class="cta-inner">
+                    <h2>Unlock Your Cognitive Edge.</h2>
+                    <p>Upgrade today. Optimize tomorrow.</p>
+                    <a href="register.html" class="btn btn-gold btn-lg magnetic-btn">Get Started Now</a>
+                    <div class="cta-subtitle">No credit card required • Cancel anytime</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Cogniva Logo"
+                            class="logo-icon"><span>Cogniva</span></a>
+                    <p>The world's first intelligent supplement management platform designed specifically for high
+                        performers seeking mental clarity and long-term cognitive longevity.</p>
+                    <div class="footer-tagline">Elevate Your Mind, Intelligently.</div>
+                </div>
+
+                <!-- Col 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home V1</a></li>
+                        <li><a href="home-v2.html">Home V2</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 40px;">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li
+                                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                                <h4 style="margin-bottom: 12px;">Dashboard</h4>
+                                <ul class="footer-links">
+                                    <li><a href="user-dashboard.html">User Dashboard</a></li>
+                                    <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-newsletter-desc">Get cognitive insights, product updates, and optimization tips
+                        delivered monthly.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold" style="padding: 0 20px; height: 46px;">Join</button>
+                    </form>
+                    <div class="social-icons-footer">
+                        <a href="#" class="icon-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <div class="footer-copyright">© 2026 Cogniva. All rights reserved.</div>
+                    <div class="footer-bottom-centered">
+                        Crafted with ❤️ for cognitive excellence.
+                    </div>
+                    <div class="footer-links" style="display: flex; gap: 20px; font-weight: 500;">
+                        <a href="coming-soon.html">Terms of Service</a>
+                        <span style="opacity: 0.3;">|</span>
+                        <a href="coming-soon.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Magnetic Button Effect
+        const magneticBtns = document.querySelectorAll('.magnetic-btn');
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // Improved Pricing Toggle Logic
+        const toggleBg = document.getElementById('toggle-indicator');
+        const periodLabels = document.querySelectorAll('.toggle-label');
+        const amounts = document.querySelectorAll('.amount');
+
+        periodLabels.forEach(label => {
+            label.addEventListener('click', () => {
+                // Update Classes
+                periodLabels.forEach(l => l.classList.remove('active'));
+                label.classList.add('active');
+
+                // Move Background Pill
+                const rect = label.getBoundingClientRect();
+                const parentRect = label.parentElement.getBoundingClientRect();
+                toggleBg.style.left = `${label.offsetLeft}px`;
+                toggleBg.style.width = `${label.offsetWidth}px`;
+
+                // Switch Amounts
+                const isYearly = label.dataset.period === 'yearly';
+                amounts.forEach(amt => {
+                    amt.style.transform = 'translateY(-10px)';
+                    amt.style.opacity = '0';
+                    setTimeout(() => {
+                        amt.textContent = isYearly ? amt.dataset.yearly : amt.dataset.monthly;
+                        amt.style.transform = 'translateY(0)';
+                        amt.style.opacity = '1';
+                    }, 200);
+                });
+            });
+        });
+
+        // Initialize Toggle Width
+        window.addEventListener('load', () => {
+            const activeLabel = document.querySelector('.toggle-label.active');
+            if (activeLabel) {
+                toggleBg.style.left = `${activeLabel.offsetLeft}px`;
+                toggleBg.style.width = `${activeLabel.offsetWidth}px`;
+            }
+        });
+
+        // Spotlight Cursor Effect
+        const priceCards = document.querySelectorAll('.price-card');
+        priceCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+
+        // FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active', !isActive);
+            });
+        });
+    </script>
+</body>
+
+</html>

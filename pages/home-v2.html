@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cogniva | Build Your Cognitive Stack with Confidence</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Track supplements, stay consistent, and improve focus with Cogniva. The intelligent platform for cognitive enhancement.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Global JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="v2-page">
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                <span>Cogniva</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="../index.html" class="active">Home <svg class="chevron" width="12" height="12"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="../index.html">Home V1</a>
+                            <a href="home-v2.html">Home V2</a>
+                        </div>
+                    </li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="coming-soon.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="coming-soon.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="user-dashboard.html">User Dashboard</a>
+                            <a href="admin-dashboard.html">Admin Dashboard</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="rtl-toggle" title="Switch Direction (LTR / RTL)">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-gold header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION (Split Premium) -->
+        <section class="v2-hero">
+            <div class="container">
+                <div class="hero-v2-grid">
+                    <div class="hero-v2-text reveal">
+                        <div class="floating-badge">Beginner-Friendly • Smart Tracking</div>
+                        <h1 class="hero-title" style="text-align: left;">Build Your Cognitive Stack With Confidence.
+                        </h1>
+                        <p class="hero-subtitle"
+                            style="text-align: left; margin-bottom: 40px; color: var(--text-muted);">
+                            Track supplements, understand patterns, and optimize performance — without overwhelm.</p>
+                        <div class="hero-btns" style="display: flex; gap: 20px;">
+                            <a href="register.html" class="btn btn-gold">Start Free</a>
+                            <a href="#journey" class="btn btn-outline">See How It Works</a>
+                        </div>
+                    </div>
+                    <div class="product-mockup-wrapper reveal" style="transition-delay: 0.2s;">
+                        <div class="mockup-glow"></div>
+                        <div class="product-mockup">
+                            <img src="../assets/images/home_v2_hero_mockup.png" alt="Cogniva Dashboard Mockup"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PROBLEM → SOLUTION SECTION (Refined Split) -->
+        <section class="section-v2-problem reveal" id="problem">
+            <div class="container">
+                <div class="comparison-grid">
+                    <div class="problem-text">
+                        <h2 class="section-title" style="text-align: left;">Biohacking Doesn’t Have to Be Confusing.
+                        </h2>
+                        <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.1rem;">Starting a cognitive
+                            optimization journey can feel like navigating a maze of conflicting advice and complex
+                            tracking. Cogniva streamlines the chaos into a clear, guided path.</p>
+                    </div>
+                    <div class="solution-comparison-cards">
+                        <div class="comp-panel comp-before">
+                            <h4 style="margin-bottom: 16px; font-weight: 700;">Before Cogniva</h4>
+                            <ul class="strip-list" style="list-style: none; padding: 0; color: var(--text-muted);">
+                                <li style="margin-bottom: 12px;"><span
+                                        style="color: #e74c3c; margin-right: 8px;">✕</span> Random supplements</li>
+                                <li style="margin-bottom: 12px;"><span
+                                        style="color: #e74c3c; margin-right: 8px;">✕</span> No tracking</li>
+                                <li style="margin-bottom: 12px;"><span
+                                        style="color: #e74c3c; margin-right: 8px;">✕</span> No clarity</li>
+                            </ul>
+                        </div>
+                        <div class="comp-panel comp-after">
+                            <h4 style="margin-bottom: 16px; font-weight: 800; color: var(--gold-accent);">After Cogniva
+                            </h4>
+                            <ul class="strip-list" style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 12px;"><span
+                                        style="color: #27ae60; margin-right: 8px;">✓</span> Structured stack</li>
+                                <li style="margin-bottom: 12px;"><span
+                                        style="color: #27ae60; margin-right: 8px;">✓</span> Clear insights</li>
+                                <li style="margin-bottom: 12px;"><span
+                                        style="color: #27ae60; margin-right: 8px;">✓</span> Confident optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. STACK BUILDER PREVIEW SECTION (SaaS UI) -->
+        <section class="section-v2-stack" id="stack">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Design Your Stack in Minutes.</h2>
+                    <p class="section-subtitle">A professional-grade interface for intelligent supplement management.
+                    </p>
+                </div>
+
+                <div class="stack-ui-container reveal">
+                    <div class="stack-preview-card">
+                        <div class="stack-row-header">
+                            <span>Supplement Name</span>
+                            <span>Dose</span>
+                            <span>Time</span>
+                            <span>Status</span>
+                        </div>
+                        <div class="stack-row">
+                            <span style="font-weight: 600;">L-Theanine</span>
+                            <span>200mg</span>
+                            <span>08:00 AM</span>
+                            <span class="stack-status status-active">Active</span>
+                        </div>
+                        <div class="stack-row">
+                            <span style="font-weight: 600;">Magnesium Threonate</span>
+                            <span>144mg</span>
+                            <span>09:00 PM</span>
+                            <span class="stack-status status-scheduled">Scheduled</span>
+                        </div>
+                        <div class="stack-row">
+                            <span style="font-weight: 600;">Creatine Monohydrate</span>
+                            <span>5g</span>
+                            <span>07:30 AM</span>
+                            <span class="stack-status status-active">Active</span>
+                        </div>
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); font-style: italic; margin-top: 32px;">
+                        “Start simple. Scale intelligently.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GUIDED JOURNEY SECTION (Refined Stepper) -->
+        <section class="section-v2-journey reveal" id="journey">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Your Optimization Roadmap.</h2>
+                    <p class="section-subtitle">Four intentional steps toward cognitive excellence.</p>
+                </div>
+
+                <div class="stepper-layout">
+                    <div class="stepper-progress-line"></div>
+
+                    <div class="step-block reveal">
+                        <div class="step-node">01</div>
+                        <h3>Create Account</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Set up your secure profile and define
+                            your cognitive goals in under a minute.</p>
+                    </div>
+
+                    <div class="step-block reveal">
+                        <div class="step-node">02</div>
+                        <h3>Add Supplements</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Input your current regimen or browse our
+                            curated database for beginner-friendly options.</p>
+                    </div>
+
+                    <div class="step-block reveal">
+                        <div class="step-node">03</div>
+                        <h3>Track Daily Intake</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Log your dosages with one tap and record
+                            how you feel throughout the day.</p>
+                    </div>
+
+                    <div class="step-block reveal">
+                        <div class="step-node">04</div>
+                        <h3>Review Insights</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Receive weekly reports analyzing your
+                            performance trends and stack effectiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. COMMUNITY SECTION (Refined Forum Posts) -->
+        <section class="section-v2-community reveal" id="community">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Learn with Others.</h2>
+                    <p class="section-subtitle">Engage in high-signal discussions within a focused community.</p>
+                </div>
+
+                <div class="forum-grid-v2">
+                    <div class="forum-post-card reveal">
+                        <div class="avatar-circle" style="width: 56px; height: 56px; font-size: 1.2rem;">B</div>
+                        <div class="forum-content" style="flex: 1;">
+                            <h4 style="margin-bottom: 8px; font-size: 1.25rem;">“Best beginner stack for focus?”</h4>
+                            <p style="color: var(--text-muted);">Looking for something simple to start with...</p>
+                            <div class="forum-meta">
+                                <span>12 Replies</span>
+                                <span>•</span>
+                                <span>2h ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forum-post-card reveal" style="transition-delay: 0.1s;">
+                        <div class="avatar-circle" style="width: 56px; height: 56px; font-size: 1.2rem;">M</div>
+                        <div class="forum-content" style="flex: 1;">
+                            <h4 style="margin-bottom: 8px; font-size: 1.25rem;">“Magnesium timing advice?”</h4>
+                            <p style="color: var(--text-muted);">Should I take Threonate before bed or morning?</p>
+                            <div class="forum-meta">
+                                <span>24 Replies</span>
+                                <span>•</span>
+                                <span>5h ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forum-post-card reveal" style="transition-delay: 0.2s;">
+                        <div class="avatar-circle" style="width: 56px; height: 56px; font-size: 1.2rem;">C</div>
+                        <div class="forum-content" style="flex: 1;">
+                            <h4 style="margin-bottom: 8px; font-size: 1.25rem;">“Tracking caffeine properly?”</h4>
+                            <p style="color: var(--text-muted);">How do you log varying cup sizes?</p>
+                            <div class="forum-meta">
+                                <span>8 Replies</span>
+                                <span>•</span>
+                                <span>1d ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. BLACK COMPARISON STRIP (Bold & Balanced) -->
+        <section class="comparison-strip-v2 reveal">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 80px;">
+                    <h2 class="section-title">Why Settle for Less?</h2>
+                    <p class="section-subtitle">Don't let manual tracking hold
+                        your performance back. See how Cogniva compares to traditional methods.</p>
+                </div>
+                <div class="v2-strip-container">
+                    <div class="v2-strip-divider"></div>
+                    <div class="strip-col">
+                        <h4>Traditional Methods</h4>
+                        <ul class="strip-list" style="list-style: none; padding: 0;">
+                            <li class="compare-item">
+                                <span class="icon" style="color: #e74c3c;">✕</span>
+                                <span class="text" style="opacity: 0.8;">Overcomplicated spreadsheet</span>
+                            </li>
+                            <li class="compare-item">
+                                <span class="icon" style="color: #e74c3c;">✕</span>
+                                <span class="text" style="opacity: 0.8;">No beginner support</span>
+                            </li>
+                            <li class="compare-item">
+                                <span class="icon" style="color: #e74c3c;">✕</span>
+                                <span class="text" style="opacity: 0.8;">Scattered, inconsistent tracking</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="strip-col">
+                        <h4 class="strip-active-title">Cogniva Optimization</h4>
+                        <ul class="strip-list" style="list-style: none; padding: 0;">
+                            <li class="compare-item"
+                                style="border-bottom: 1px solid rgba(191,164,111,0.1); padding-bottom: 8px;">
+                                <span class="icon" style="color: #27ae60;">✓</span>
+                                <span class="text" style="font-weight: 500;">Simple, intuitive interface</span>
+                            </li>
+                            <li class="compare-item"
+                                style="border-bottom: 1px solid rgba(191,164,111,0.1); padding-bottom: 8px;">
+                                <span class="icon" style="color: #27ae60;">✓</span>
+                                <span class="text" style="font-weight: 500;">Structured, guided tracking</span>
+                            </li>
+                            <li class="compare-item"
+                                style="border-bottom: 1px solid rgba(191,164,111,0.1); padding-bottom: 8px;">
+                                <span class="icon" style="color: #27ae60;">✓</span>
+                                <span class="text" style="font-weight: 500;">Built to grow with your stack</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FINAL CTA (Impactful Transition) -->
+        <section class="v2-final-cta reveal" style="padding: 120px 0;">
+            <div class="container cta-v2-container">
+                <h2 class="section-title">Start Smart. Stay Consistent.</h2>
+                <p class="section-subtitle" style="margin-bottom: 48px;">No pressure. No complexity. Just intelligent
+                    tracking.</p>
+                <div class="reveal">
+                    <a href="register.html" class="btn btn-gold btn-large" style="padding: 24px 64px;">Begin Your
+                        Journey</a>
+                    <p class="micro-text" style="color: var(--text-muted); margin-top: 24px; font-weight: 500;">Free
+                        plan available • No credit card required</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Cogniva Logo"
+                            class="logo-icon"><span>Cogniva</span></a>
+                    <p>The world's first intelligent supplement management platform designed specifically for high
+                        performers seeking mental clarity and long-term cognitive longevity.</p>
+                    <div class="footer-tagline">Elevate Your Mind, Intelligently.</div>
+                </div>
+
+                <!-- Col 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home V1</a></li>
+                        <li><a href="home-v2.html">Home V2</a></li>
+                        <li><a href="../index.html#features">Features</a></li>
+                        <li><a href="../index.html#pricing">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 40px;">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="coming-soon.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li style="margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                                <h4 style="margin-bottom: 12px;">Dashboard</h4>
+                                <ul class="footer-links">
+                                    <li><a href="user-dashboard.html">User Dashboard</a></li>
+                                    <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-newsletter-desc">Get cognitive insights, product updates, and optimization tips
+                        delivered monthly.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold" style="padding: 0 20px; height: 46px;">Join</button>
+                    </form>
+                    <div class="social-icons-footer">
+                        <a href="#" class="icon-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <div class="footer-copyright">© 2026 Cogniva. All rights reserved.</div>
+                    <div class="footer-bottom-centered">
+                        Crafted with ❤️ for cognitive excellence.
+                    </div>
+                    <div class="footer-links" style="display: flex; gap: 20px; font-weight: 500;">
+                        <a href="coming-soon.html">Terms of Service</a>
+                        <span style="opacity: 0.3;">|</span>
+                        <a href="coming-soon.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Cogniva - Insights for Intelligent Optimization</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Research, frameworks, and practical guidance for building a smarter cognitive stack. Explore the latest in biohacking, nootropics, and performance science.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <!-- Global JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body class="blog-page">
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
+                <span>Cogniva</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="../index.html">Home <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="../index.html">Home V1</a>
+                            <a href="home-v2.html">Home V2</a>
+                        </div>
+                    </li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg></a>
+                        <div class="dropdown-content">
+                            <a href="user-dashboard.html">User Dashboard</a>
+                            <a href="admin-dashboard.html">Admin Dashboard</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="rtl-toggle" title="Switch Direction">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-gold header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1️⃣ HERO SECTION -->
+        <section class="blog-hero">
+            <div class="container reveal">
+                <h1 class="animated-underline">Insights for Intelligent Optimization.</h1>
+                <p class="section-subtext">Research, frameworks, and practical guidance for building a smarter cognitive
+                    stack.</p>
+                <div class="blog-categories-tags">
+                    <span class="category-tag">Biohacking</span>
+                    <span class="category-tag">Nootropics</span>
+                    <span class="category-tag">Tracking</span>
+                    <span class="category-tag">Performance</span>
+                    <span class="category-tag">Research</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2️⃣ FEATURED ARTICLE SECTION -->
+        <section class="section-featured-blog">
+            <div class="container reveal">
+                <a href="coming-soon.html" class="featured-blog-card">
+                    <div class="featured-blog-image">
+                        <span class="featured-badge">Featured Insight</span>
+                        <img src="../assets/images/blog/section2.jpg" alt="Supplement Research">
+                    </div>
+                    <div class="featured-blog-content">
+                        <h2>Why Most Supplement Stacks Fail Without Tracking</h2>
+                        <p>Most high performers treat cognitive optimization as a guessing game. Discover how
+                            data-driven
+                            tracking can reveal the hidden inefficiencies in your daily stack.</p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 8 min read</span>
+                            <span class="read-more-link">Read Full Insight →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3️⃣ CATEGORY FILTER BAR -->
+        <section class="category-filter-section">
+            <div class="container">
+                <div class="category-filter-bar">
+                    <span class="filter-item active">All</span>
+                    <span class="filter-item">Focus</span>
+                    <span class="filter-item">Sleep</span>
+                    <span class="filter-item">Supplements</span>
+                    <span class="filter-item">Beginner Guides</span>
+                    <span class="filter-item">Data Science</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4️⃣ BLOG GRID SECTION -->
+        <section class="blog-grid-section">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Card 1 -->
+                    <a href="coming-soon.html" class="blog-card reveal">
+                        <div class="blog-card-image">
+                            <img src="../assets/images/blog/The Neurology of Flow States.jpg" alt="Focus Optimization">
+                        </div>
+                        <span class="blog-card-category">Focus</span>
+                        <h3>The Neurology of Flow States</h3>
+                        <p>Exploring the chemical thresholds required for sustained deep work and mental endurance.</p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 5 min read</span>
+                            <span class="read-more-link">Read More →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="coming-soon.html" class="blog-card reveal" style="transition-delay: 0.1s;">
+                        <div class="blog-card-image">
+                            <img src="../assets/images/blog/Magnesium Threonate.jpg" alt="Sleep Quality">
+                        </div>
+                        <span class="blog-card-category">Sleep</span>
+                        <h3>Magnesium Threonate: A Deep Dive</h3>
+                        <p>How this specific form of magnesium crosses the blood-brain barrier to improve REM sleep
+                            cycles.
+                        </p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 6 min read</span>
+                            <span class="read-more-link">Read More →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="coming-soon.html" class="blog-card reveal" style="transition-delay: 0.2s;">
+                        <div class="blog-card-image">
+                            <img src="../assets/images/blog/Mapping Your Cognitive Baseline.jpg" alt="Data Science">
+                        </div>
+                        <span class="blog-card-category">Data Science</span>
+                        <h3>Mapping Your Cognitive Baseline</h3>
+                        <p>The first 30 days of tracking: exactly which metrics matter for cognitive longevity.</p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 12 min read</span>
+                            <span class="read-more-link">Read More →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="coming-soon.html" class="blog-card reveal">
+                        <div class="blog-card-image">
+                            <img src="../assets/images/blog/Adaptogens and Adrenal Fatigue.jpg" alt="Research">
+                        </div>
+                        <span class="blog-card-category">Research</span>
+                        <h3>Adaptogens and Adrenal Fatigue</h3>
+                        <p>Understanding the bidirectional relationship between Ashwagandha and cortisol regulation.</p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 7 min read</span>
+                            <span class="read-more-link">Read More →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 5 -->
+                    <a href="coming-soon.html" class="blog-card reveal" style="transition-delay: 0.1s;">
+                        <div class="blog-card-image">
+                            <img src="../assets/images/blog/First Principles of Nootropics.jpg" alt="Beginner Guide">
+                        </div>
+                        <span class="blog-card-category">Beginner Guides</span>
+                        <h3>First Principles of Nootropics</h3>
+                        <p>Safety, dosage, and synergies: A foundation for building your first intelligent stack.</p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 10 min read</span>
+                            <span class="read-more-link">Read More →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 6 -->
+                    <a href="coming-soon.html" class="blog-card reveal" style="transition-delay: 0.2s;">
+                        <div class="blog-card-image">
+                            <img src="../assets/images/blog/The Circadian Stack Strategy.jpg" alt="Performance">
+                        </div>
+                        <span class="blog-card-category">Performance</span>
+                        <h3>The Circadian Stack Strategy</h3>
+                        <p>Timing your supplements with your body's natural rhythms for maximum efficacy.</p>
+                        <div class="blog-card-footer">
+                            <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg> 8 min read</span>
+                            <span class="read-more-link">Read More →</span>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- 7️⃣ POPULAR THIS WEEK SECTION -->
+        <section class="popular-blog-section reveal">
+            <div class="container">
+                <div class="section-minimal-header">
+                    <h2>Popular This Week</h2>
+                    <a href="#" class="view-all-link">View All Trending →</a>
+                </div>
+                <div class="popular-list-grid">
+                    <a href="coming-soon.html" class="popular-item">
+                        <div class="popular-rank">01</div>
+                        <div class="popular-content">
+                            <span class="category-tag-minimal">Supplements</span>
+                            <h4>The Ideal L-Theanine to Caffeine Ratio</h4>
+                            <p>How a 2:1 ratio can eliminate jitters and prolong the cognitive half-life of your morning
+                                coffee.</p>
+                        </div>
+                    </a>
+                    <a href="coming-soon.html" class="popular-item">
+                        <div class="popular-rank">02</div>
+                        <div class="popular-content">
+                            <span class="category-tag-minimal">Tracking</span>
+                            <h4>HRV Metrics: The Hidden Indicator of Burnout</h4>
+                            <p>Why Heart Rate Variability drops up to 48 hours before cognitive exhaustion hits.</p>
+                        </div>
+                    </a>
+                    <a href="coming-soon.html" class="popular-item">
+                        <div class="popular-rank">03</div>
+                        <div class="popular-content">
+                            <span class="category-tag-minimal">Sleep</span>
+                            <h4>Temperature Regulation for Deep Phase Sleep</h4>
+                            <p>Cooling the core body temperature to force earlier onset of restorative delta waves.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8️⃣ EXPERT CONTRIBUTORS SECTION -->
+        <section class="expert-authors-section reveal">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2>Our Editorial Board</h2>
+                    <p class="section-subtext">Articles reviewed by medical doctors, researchers, and data
+                        scientists.</p>
+                </div>
+                <div class="authors-grid">
+                    <div class="author-card">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200"
+                                alt="Dr. Sarah Jenkins">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Jenkins</h4>
+                            <p>Neurobiology & Cognitive Aging</p>
+                        </div>
+                    </div>
+                    <div class="author-card">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200"
+                                alt="Marcus Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Marcus Chen</h4>
+                            <p>Lead Data Scientist</p>
+                        </div>
+                    </div>
+                    <div class="author-card">
+                        <div class="author-avatar">
+                            <img src="../assets/images/blog/Elena Rostova.jpg" alt="Elena Rostova">
+                        </div>
+                        <div class="author-info">
+                            <h4>Elena Rostova</h4>
+                            <p>Sports Nutritionist</p>
+                        </div>
+                    </div>
+                    <div class="author-card">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=200"
+                                alt="Dr. Alistair Vance">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Alistair Vance</h4>
+                            <p>Sleep Medicine Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5️⃣ NEWSLETTER SECTION -->
+        <section class="blog-newsletter reveal">
+            <div class="container">
+                <div class="newsletter-box">
+                    <h2 class="animated-underline">Stay Ahead of Your Cognitive Curve.</h2>
+                    <p>Weekly insights on structured optimization, research deep-dives, and community stack strategies.
+                    </p>
+                    <form class="blog-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold">Join the List</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6️⃣ KNOWLEDGE CTA SECTION -->
+        <section class="contact-cta-wrapper reveal">
+            <div class="container">
+                <h2 class="animated-underline">Build With Intelligence, Not Guesswork.</h2>
+                <p>Ready to structure your optimization journey?</p>
+                <a href="register.html" class="btn btn-gold btn-lg">Start Free</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Cogniva Logo"
+                            class="logo-icon"><span>Cogniva</span></a>
+                    <p>The world's first intelligent supplement management platform designed specifically for high
+                        performers seeking mental clarity and long-term cognitive longevity.</p>
+                    <div class="footer-tagline">Elevate Your Mind, Intelligently.</div>
+                </div>
+
+                <!-- Col 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home V1</a></li>
+                        <li><a href="home-v2.html">Home V2</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <div style="margin-bottom: 40px;">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li
+                                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                                <h4 style="margin-bottom: 12px;">Dashboard</h4>
+                                <ul class="footer-links">
+                                    <li><a href="user-dashboard.html">User Dashboard</a></li>
+                                    <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-newsletter-desc">Get cognitive insights, product updates, and optimization tips
+                        delivered monthly.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-gold" style="padding: 0 20px; height: 46px;">Join</button>
+                    </form>
+                    <div class="social-icons-footer">
+                        <a href="#" class="icon-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-row">
+                    <div class="footer-copyright">© 2026 Cogniva. All rights reserved.</div>
+                    <div class="footer-bottom-centered">
+                        Crafted with ❤️ for cognitive excellence.
+                    </div>
+                    <div class="footer-links" style="display: flex; gap: 20px; font-weight: 500;">
+                        <a href="coming-soon.html">Terms of Service</a>
+                        <span style="opacity: 0.3;">|</span>
+                        <a href="coming-soon.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Category Filter Functionality
+        document.querySelectorAll('.filter-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.filter-item.active').classList.remove('active');
+                item.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -46,11 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // RTL Toggle — with localStorage persistence
     const rtlToggle = document.getElementById('rtl-toggle');
     if (rtlToggle) {
+        // Initial button text state based on current direction
+        const initialDir = document.documentElement.dir || 'ltr';
+        rtlToggle.textContent = initialDir === 'rtl' ? 'LTR' : 'RTL';
+        rtlToggle.style.fontWeight = '700';
+        rtlToggle.style.fontSize = '12px';
+
         rtlToggle.addEventListener('click', () => {
             const currentDir = document.documentElement.dir;
             const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
             document.documentElement.dir = newDir;
             localStorage.setItem('cogniva-dir', newDir);
+            
+            // Update button label dynamically
+            rtlToggle.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
         });
     }
 
@@ -88,19 +97,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('header nav');
 
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            mobileToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
-        });
-
-        const backBtn = navMenu.querySelector('#mobile-back-btn');
-        if (backBtn) {
-            backBtn.addEventListener('click', () => {
+        // Dynamically add a clear "X" close button to the top of the menu if it doesn't exist
+        if (!navMenu.querySelector('.mobile-close-btn')) {
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'mobile-close-btn';
+            closeBtn.setAttribute('aria-label', 'Close Menu');
+            closeBtn.innerHTML = `
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            `;
+            closeBtn.onclick = () => {
                 mobileToggle.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = 'auto';
-            });
+            };
+            navMenu.prepend(closeBtn);
+        }
+
+        mobileToggle.addEventListener('click', () => {
+            const isActive = navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active', isActive);
+            
+            // Add state class to header and body for CSS targeting
+            const header = document.getElementById('main-header');
+            if (header) header.classList.toggle('mobile-nav-active', isActive);
+            document.body.classList.toggle('mobile-menu-open', isActive);
+            
+            document.body.style.overflow = isActive ? 'hidden' : 'auto';
+        });
+
+        // Update close functionality to clear states
+        const closeActions = () => {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            const header = document.getElementById('main-header');
+            if (header) header.classList.remove('mobile-nav-active');
+            document.body.classList.remove('mobile-menu-open');
+            document.body.style.overflow = 'auto';
+        };
+
+        if (navMenu.querySelector('.mobile-close-btn')) {
+            navMenu.querySelector('.mobile-close-btn').onclick = closeActions;
+        }
+        
+        const backBtn = navMenu.querySelector('#mobile-back-btn');
+        if (backBtn) {
+            backBtn.addEventListener('click', closeActions);
         }
 
         // Toggle dropdowns on mobile

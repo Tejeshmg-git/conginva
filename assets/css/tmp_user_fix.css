@@ -1,0 +1,77 @@
+
+/* 📱 MOBILE OVERRIDES FOR 320px - 450px */
+@media (max-width: 480px) {
+    .card-header-flex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .card-header-flex h3 {
+        width: 100% !important;
+        line-height: 1.2 !important;
+    }
+
+    .card-header-flex h3 span {
+        display: block !important;
+        margin-inline-start: 0 !important;
+        margin-top: 4px !important;
+        font-size: 12px !important;
+    }
+
+    .chart-toggle {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        background: rgba(0,0,0,0.03) !important;
+        padding: 4px !important;
+        border-radius: 8px !important;
+    }
+
+    .toggle-btn {
+        flex: 1 !important;
+        text-align: center !important;
+        padding: 10px 4px !important;
+        font-size: 12px !important;
+        border-radius: 6px !important;
+    }
+
+    /* Topbar Icon Crowding */
+    .topbar-right {
+        gap: 8px !important;
+    }
+
+    .user-profile {
+        padding-inline-start: 8px !important;
+        border-inline-start: none !important;
+    }
+
+    /* Metric Cards Scaling */
+    .metrics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .metric-value {
+        font-size: 1.6rem !important;
+    }
+
+    /* AI Insight Box optimization */
+    .ai-insight-box {
+        padding: 12px !important;
+        font-size: 12px !important;
+    }
+
+    /* Dashboard grids */
+    .dashboard-layout-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Chart markers font size override */
+    .chart-marker-label {
+        font-size: 8px !important;
+        display: none !important; /* Hide labels on mobile charts to avoid overlap */
+    }
+}

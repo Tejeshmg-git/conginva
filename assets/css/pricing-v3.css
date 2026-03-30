@@ -1,0 +1,195 @@
+/* ----------------------------------------
+   PRICING V3 - NEXT-GEN PREMIUM ARCHITECTURE
+   ---------------------------------------- */
+.pricing-v2 {
+    padding: 140px 0;
+    background: radial-gradient(circle at top right, rgba(191, 164, 111, 0.05), transparent 60%),
+                radial-gradient(circle at bottom left, rgba(191, 164, 111, 0.03), transparent 60%);
+    position: relative;
+    z-index: 5;
+    margin-top: -80px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 40px;
+    padding: 64px 44px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+body.dark-mode .pricing-card {
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(25px);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.pricing-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.08);
+    border-color: rgba(191, 164, 111, 0.3);
+}
+
+.pricing-card.featured {
+    background: var(--white);
+    border: 2px solid var(--gold-accent);
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 40px 90px rgba(191, 164, 111, 0.18);
+}
+
+body.dark-mode .pricing-card.featured {
+    background: linear-gradient(145deg, rgba(40, 40, 40, 0.9), rgba(20, 20, 20, 0.9));
+}
+
+.pricing-popular-badge {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: var(--gold-accent);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 900;
+    padding: 8px 18px;
+    border-radius: 100px;
+    letter-spacing: 0.15em;
+    box-shadow: 0 10px 25px rgba(191, 164, 111, 0.3);
+    pointer-events: none;
+}
+
+.card-tier-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-accent);
+    margin-bottom: 40px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card-price-display {
+    margin-bottom: 32px;
+}
+
+.card-price-display h2 {
+    font-size: 5.5rem;
+    font-weight: 900;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.card-price-display h2 .currency {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.card-price-display h2 .period {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-left: 6px;
+    letter-spacing: 0;
+}
+
+.card-description {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 48px;
+    min-height: 3.4em;
+}
+
+.pricing-feature-list {
+    margin: 40px 0;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pricing-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.pricing-feature-list li strong {
+    color: var(--text-main);
+}
+
+.pricing-feature-list li svg {
+    color: var(--gold-accent);
+    background: rgba(191, 164, 111, 0.08);
+    padding: 8px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.pricing-card .btn {
+    padding: 22px;
+    border-radius: 100px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pricing-card .btn:hover {
+    transform: scale(1.02) translateY(-4px);
+}
+
+@media (max-width: 1200px) {
+    .pricing-grid {
+        gap: 20px;
+    }
+    .pricing-card {
+        padding: 56px 32px;
+    }
+    .card-price-display h2 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-v2 {
+        padding: 100px 0;
+        margin-top: 0;
+    }
+}

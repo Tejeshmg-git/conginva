@@ -1,0 +1,92 @@
+
+/* ⚡ TELEMETRY GRID DEFAULTS */
+.telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.telemetry-item {
+    text-align: center;
+    padding: 16px;
+    border-right: 1px solid var(--admin-border-color);
+}
+
+.telemetry-item.no-border {
+    border-right: none;
+}
+
+.telemetry-label {
+    font-size: 11px;
+    color: var(--admin-text-muted);
+    margin-bottom: 4px;
+}
+
+.telemetry-value {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.telemetry-value.success {
+    color: var(--admin-accent-success);
+}
+
+.telemetry-value.primary {
+    color: var(--admin-accent-primary);
+}
+
+.telemetry-value.warning {
+    color: var(--admin-accent-warning);
+}
+
+/* 📱 MOBILE FIXES FOR 320px-450px */
+@media (max-width: 450px) {
+    .admin-sidebar-header {
+        padding: 0 16px !important;
+        justify-content: space-between !important;
+    }
+
+    .admin-sidebar-header .logo {
+        gap: 8px !important;
+    }
+
+    .admin-sidebar-header .logo span {
+        font-size: 9px !important;
+        padding: 1px 6px !important;
+    }
+
+    /* Fix the "X" button position */
+    #admin-mobile-close {
+        padding: 8px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+    }
+
+    /* Resource Telemetry Stack */
+    .telemetry-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .telemetry-item {
+        border-right: none !important;
+        border-bottom: 1px solid var(--admin-border-color);
+        padding: 12px 8px !important;
+    }
+
+    .telemetry-grid .telemetry-item:nth-child(2) {
+        border-bottom: 1px solid var(--admin-border-color);
+    }
+
+    .telemetry-grid .telemetry-item:nth-child(3),
+    .telemetry-grid .telemetry-item:nth-child(4) {
+        border-bottom: none !important;
+    }
+
+    .telemetry-value {
+        font-size: 16px !important;
+    }
+}

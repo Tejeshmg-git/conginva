@@ -1,0 +1,8 @@
+
+/* 🖥️ 1024px TRANSITION FIX */
+@media (max-width: 1024px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}

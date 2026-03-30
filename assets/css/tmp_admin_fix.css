@@ -1,0 +1,75 @@
+
+@media (max-width: 450px) {
+    /* 🔹 SPECIFIC COMPONENT FIXES FOR MOBILE */
+    .mod-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 16px !important;
+    }
+
+    .mod-details { width: 100%; }
+
+    .mod-item .action-btns {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .mod-item .action-btns button { width: 100%; }
+
+    /* Reports & Analytics Scaling */
+    [id="tab-reports"] .admin-card > div > div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    [id="tab-reports"] .admin-card div[style*="display:flex; gap:8px"] {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    [id="tab-analytics"] div[style*="grid-template-columns: repeat(4, 1fr)"],
+    [id="tab-health"] div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    /* 🔹 TABLE MOBILE CARD CONVERSION (Solid Blocks) */
+    .admin-table-container { border: none; overflow-x: visible !important; }
+    .admin-table thead { display: none !important; }
+    .admin-table, .admin-table tbody, .admin-table tr, .admin-table td {
+        display: block !important; width: 100% !important;
+    }
+    .admin-table tr {
+        margin-bottom: 20px;
+        background: var(--admin-bg-body);
+        border: 1px solid var(--admin-border-color);
+        border-radius: 12px;
+        padding: 16px !important;
+    }
+    .admin-table td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        text-align: right !important;
+    }
+    .admin-table td:last-child { border-bottom: none !important; }
+    .admin-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: var(--admin-text-muted);
+        text-align: left;
+    }
+    .user-cell { justify-content: flex-end !important; width: auto !important; }
+}

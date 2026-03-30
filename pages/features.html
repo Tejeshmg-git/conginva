@@ -43,10 +43,10 @@
                             <a href="home-v2.html">Home V2</a>
                         </div>
                     </li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="features.html" class="active">Features</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li class="dropdown">
                         <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
@@ -59,6 +59,7 @@
                             <a href="admin-dashboard.html">Admin Dashboard</a>
                         </div>
                     </li>
+                    <li class="mobile-cta-item"><a href="register.html" class="btn btn-gold btn-sm" style="margin-top: 10px;">Get Started</a></li>
                 </ul>
                 <div class="mobile-menu-back">
                     <button class="back-to-page-btn" id="mobile-back-btn">
@@ -82,8 +83,9 @@
                     </svg>
                 </button>
                 <button class="icon-btn" id="rtl-toggle" title="Switch Direction">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12h18M3 12l4-4m-4 4 4 4M21 12l-4-4m4 4-4 4" />
+                        <path d="M4 18h16M4 6h16" opacity="0.4" />
                     </svg>
                 </button>
                 <a href="register.html" class="btn btn-gold header-cta">Get Started</a>
@@ -358,15 +360,18 @@
             <div class="container">
                 <div class="sec-blocks">
                     <div class="sec-block reveal">
+                        <img src="../assets/images/Features/Bank-Level Security.jpg" alt="Bank-Level Security" class="sec-block-img">
                         <h3>Bank-Level Security</h3>
                         <p>Your physiological data is encrypted with AES-256 at rest and in transit. We never sell your
                             data.</p>
                     </div>
                     <div class="sec-block reveal" style="transition-delay: 0.1s;">
+                        <img src="../assets/images/Features/Low-Latency Mirror.jpg" alt="Low-Latency Mirror" class="sec-block-img">
                         <h3>Low-Latency Mirror</h3>
                         <p>Global edge nodes ensure your logs sync instantly across all devices, even offline.</p>
                     </div>
                     <div class="sec-block reveal" style="transition-delay: 0.2s;">
+                        <img src="../assets/images/Features/Clinical Accuracy.jpg" alt="Clinical Accuracy" class="sec-block-img">
                         <h3>Clinical Accuracy</h3>
                         <p>Our database is cross-referenced with peer-reviewed research for ultimate reliability.</p>
                     </div>
@@ -377,7 +382,7 @@
         <!-- FINAL CTA SECTION -->
         <section class="section-cta reveal">
             <div class="container">
-                <div class="cta-card cta-features">
+                <div class="cta-card">
                     <h2>The Architecture of Clarity.</h2>
                     <p>Ready to see what you're capable of? Deploy your first intelligent cognitive stack today.</p>
                     <a href="register.html" class="btn btn-gold btn-lg">Deploy Your First Stack</a>

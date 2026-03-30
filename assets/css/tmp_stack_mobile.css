@@ -1,0 +1,47 @@
+
+/* 💊 SUPPLEMENT STACK MOBILE OPTIMIZATION */
+@media (max-width: 576px) {
+    .stack-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 16px !important;
+        position: relative;
+    }
+
+    .stack-info {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .stack-info h4 {
+        font-size: 14px !important;
+        flex-wrap: wrap;
+        gap: 4px !important;
+    }
+
+    .stack-dose {
+        width: 100% !important;
+        text-align: left !important;
+        margin-left: 56px !important;
+        font-size: 13px !important;
+        flex: none !important;
+    }
+
+    .stack-status {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 10px !important;
+        text-align: right !important;
+        flex: none !important;
+    }
+    
+    .stack-time {
+        display: block !important;
+        margin-left: 56px !important;
+        text-align: left !important;
+        font-size: 12px !important;
+        opacity: 0.8;
+    }
+}

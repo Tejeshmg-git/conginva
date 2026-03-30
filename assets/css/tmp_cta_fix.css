@@ -1,0 +1,23 @@
+
+/* 🚀 MOBILE CTA INTEGRATION */
+.mobile-cta-item {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .mobile-cta-item {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .mobile-cta-item .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 28px !important;
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px;
+    }
+}

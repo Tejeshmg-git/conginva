@@ -1,0 +1,8 @@
+
+/* 🛑 LOGO VISIBILITY FIX FOR MOBILE DRAWER */
+header.mobile-nav-active .logo {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.2s ease;
+}

@@ -44,10 +44,10 @@
                             <a href="pages/home-v2.html">Home V2</a>
                         </div>
                     </li>
+                    <li><a href="pages/about.html">About</a></li>
                     <li><a href="pages/features.html">Features</a></li>
                     <li><a href="pages/pricing.html">Pricing</a></li>
                     <li><a href="pages/blog.html">Blog</a></li>
-                    <li><a href="pages/about.html">About</a></li>
                     <li><a href="pages/contact.html">Contact</a></li>
                     <li class="dropdown">
                         <a href="#">Dashboard <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
@@ -60,6 +60,7 @@
                             <a href="pages/admin-dashboard.html">Admin Dashboard</a>
                         </div>
                     </li>
+                    <li class="mobile-cta-item"><a href="pages/register.html" class="btn btn-gold btn-sm" style="margin-top: 10px;">Get Started</a></li>
                 </ul>
                 <div class="mobile-menu-back">
                     <button class="back-to-page-btn" id="mobile-back-btn">
@@ -83,9 +84,9 @@
                     </svg>
                 </button>
                 <button class="icon-btn" id="rtl-toggle" title="Switch Direction (LTR / RTL)">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M7 16l-4-4 4-4M3 12h18M17 8l4 4-4 4"></path>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12h18M3 12l4-4m-4 4 4 4M21 12l-4-4m4 4-4 4" />
+                        <path d="M4 18h16M4 6h16" opacity="0.4" />
                     </svg>
                 </button>
                 <a href="pages/register.html" class="btn btn-gold header-cta">Get Started</a>
@@ -278,26 +279,42 @@
                     Upgrade anytime
                     as your needs grow.</p>
             </div>
-            <div class="pricing-grid grid-2x2">
-                <div class="card price-card pricing-card">
-                    <h3>Free Plan</h3>
-                    <ul class="price-features">
+            <div class="modern-pricing-system">
+                
+                <!-- FREE PLAN -->
+                <div class="modern-price-card reveal">
+                    <span class="plan-label">BEGINNER</span>
+                    <h2 class="price-value">$0 <span>/mo</span></h2>
+                    
+                    <a href="pages/register.html" class="btn btn-outline" style="width: 100%;">Current Plan</a>
+                    
+                    <div class="card-divider"></div>
+                    
+                    <ul class="feature-list-simple">
                         <li>Up to 3 supplements</li>
                         <li>Basic tracking</li>
                         <li>Forum access</li>
                     </ul>
-                    <a href="pages/register.html" class="btn btn-outline full-width">Current Plan</a>
                 </div>
-                <div class="card price-card pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Pro Plan</h3>
-                    <ul class="price-features">
+
+                <!-- PRO PLAN -->
+                <div class="modern-price-card featured reveal" style="transition-delay: 0.1s;">
+                    <div class="popular-tag">Most Popular</div>
+                    <span class="plan-label">PRO</span>
+                    <h2 class="price-value">$19 <span>/mo</span></h2>
+                    
+                    <a href="pages/register.html" class="btn btn-gold" style="width: 100%;">Upgrade to Pro</a>
+                    
+                    <div class="card-divider"></div>
+                    
+                    <ul class="feature-list-simple">
                         <li>Unlimited supplements</li>
-                        <li>Advanced analytics</li>
-                        <li>Priority support</li>
+                        <li>Full AI Insights</li>
+                        <li>Real-time Analysis</li>
+                        <li>Priority Support</li>
                     </ul>
-                    <a href="pages/register.html" class="btn btn-gold full-width">Upgrade to Pro</a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -305,7 +322,7 @@
     <!-- Final CTA Section -->
     <section class="section-cta">
         <div class="container">
-            <div class="cta-card cta-home-v1">
+            <div class="cta-card">
                 <h2>Ready to Unlock Your Cognitive Potential?</h2>
                 <p>Join thousands of high performers optimizing their focus, clarity, and long-term mental performance
                     with Cogniva.</p>

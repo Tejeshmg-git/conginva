@@ -7,14 +7,13 @@ ADMIN DASHBOARD STYLES (Advanced SaaS)
 :root {
     --admin-bg-body: var(--bg-dashboard, #f5f1ea);
     --admin-bg-card: var(--bg-card, #ffffff);
-    --admin-bg-sidebar: #111111;
-    /* Keep dark sidebar for contrast */
+    --admin-bg-sidebar: #ffffff;
     --admin-text-main: var(--text-main, #111111);
     --admin-text-muted: var(--text-muted, #6e6a64);
-    --admin-text-sidebar: #a0aec0;
-    --admin-text-sidebar-active: #ffffff;
+    --admin-text-sidebar: #4a5568;
+    --admin-text-sidebar-active: var(--gold-accent, #BFA46F);
     --admin-border-color: var(--border-color, rgba(0, 0, 0, 0.08));
-    --admin-border-sidebar: #2d3748;
+    --admin-border-sidebar: rgba(0, 0, 0, 0.08);
 
     --admin-accent-primary: var(--gold-accent, #BFA46F);
     --admin-accent-success: #38a169;
@@ -35,6 +34,10 @@ body.dark-mode {
     --admin-text-main: #F5F1EA;
     --admin-text-muted: #a0a09a;
     --admin-border-color: rgba(255, 255, 255, 0.1);
+    --admin-bg-sidebar: #1a1a1a;
+    --admin-text-sidebar: #a0aec0;
+    --admin-text-sidebar-active: #ffffff;
+    --admin-border-sidebar: rgba(255, 255, 255, 0.1);
 }
 
 body.admin-dashboard-page {
@@ -837,16 +840,38 @@ body.admin-dashboard-page {
         grid-template-columns: 1fr;
     }
 
+    /* Sidebar removed from here to keep it expanded at 1024px */
+}
+
+@media (max-width: 900px) {
     .admin-sidebar {
         width: 80px;
     }
 
     .admin-sidebar-header {
+        padding: 0;
         justify-content: center;
     }
 
-    .admin-logo span {
-        display: none;
+    .logo {
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo img {
+        height: 28px;
+        margin: 0;
+    }
+
+    .logo span, 
+    .logo-text-only { /* Hide "Cogniva" text and "ADMIN" badge */
+        display: none !important;
+    }
+
+    /* Target the text nodes directly if wrap isn't present */
+    .logo {
+        font-size: 0;
     }
 
     .admin-nav-label {
@@ -864,14 +889,30 @@ body.admin-dashboard-page {
 }
 
 @media (max-width: 768px) {
+    .admin-sidebar-header {
+        justify-content: space-between !important;
+        padding: 0 16px !important;
+    }
+
+    #admin-mobile-close {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 8px;
+    }
+
     .admin-sidebar {
-        position: fixed;
+        position: fixed !important;
         left: -100%;
         top: 0;
         bottom: 0;
         width: 250px;
         z-index: 2000;
         box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        transition: transform 0.3s ease, left 0.3s ease !important;
     }
 
     .admin-main {
@@ -879,8 +920,33 @@ body.admin-dashboard-page {
         flex: none !important;
     }
 
+    /* Restore Brand Visibility on Mobile Drawer */
+    .admin-sidebar .logo {
+        font-size: 1.1rem !important;
+        justify-content: flex-start !important;
+        padding-left: 10px;
+    }
+
+    .admin-sidebar .logo span {
+        display: inline-block !important;
+        font-size: 10px !important;
+    }
+
+    .admin-sidebar .admin-nav-link span {
+        display: block !important;
+    }
+
+    .admin-sidebar .admin-nav-link {
+        justify-content: flex-start !important;
+        padding: 10px 12px !important;
+    }
+
+    .admin-sidebar .admin-nav-label {
+        display: block !important;
+    }
+
     .admin-sidebar.mobile-open {
-        left: 0;
+        left: 0 !important;
     }
 
     [dir="rtl"] .admin-sidebar.mobile-open {
@@ -983,5 +1049,171 @@ body.admin-dashboard-page {
 
     .admin-breadcrumb {
         font-size: 11px;
+    }
+}
+@media (max-width: 450px) {
+    /* 🔹 SPECIFIC COMPONENT FIXES FOR MOBILE */
+    .mod-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 16px !important;
+    }
+
+    .mod-details { width: 100%; }
+
+    .mod-item .action-btns {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .mod-item .action-btns button { width: 100%; }
+
+    /* Reports & Analytics Scaling */
+    [id="tab-reports"] .admin-card > div > div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    [id="tab-reports"] .admin-card div[style*="display:flex; gap:8px"] {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    [id="tab-analytics"] div[style*="grid-template-columns: repeat(4, 1fr)"],
+    [id="tab-health"] div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    /* 🔹 TABLE MOBILE CARD CONVERSION (Solid Blocks) */
+    .admin-table-container { border: none; overflow-x: visible !important; }
+    .admin-table thead { display: none !important; }
+    .admin-table, .admin-table tbody, .admin-table tr, .admin-table td {
+        display: block !important; width: 100% !important;
+    }
+    .admin-table tr {
+        margin-bottom: 20px;
+        background: var(--admin-bg-body);
+        border: 1px solid var(--admin-border-color);
+        border-radius: 12px;
+        padding: 16px !important;
+    }
+    .admin-table td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        text-align: right !important;
+    }
+    .admin-table td:last-child { border-bottom: none !important; }
+    .admin-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: var(--admin-text-muted);
+        text-align: left;
+    }
+    .user-cell { justify-content: flex-end !important; width: auto !important; }
+}
+
+/* ⚡ TELEMETRY GRID DEFAULTS */
+.telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.telemetry-item {
+    text-align: center;
+    padding: 16px;
+    border-right: 1px solid var(--admin-border-color);
+}
+
+.telemetry-item.no-border {
+    border-right: none;
+}
+
+.telemetry-label {
+    font-size: 11px;
+    color: var(--admin-text-muted);
+    margin-bottom: 4px;
+}
+
+.telemetry-value {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.telemetry-value.success {
+    color: var(--admin-accent-success);
+}
+
+.telemetry-value.primary {
+    color: var(--admin-accent-primary);
+}
+
+.telemetry-value.warning {
+    color: var(--admin-accent-warning);
+}
+
+/* 📱 MOBILE FIXES FOR 320px-450px */
+@media (max-width: 450px) {
+    .admin-sidebar-header {
+        padding: 0 16px !important;
+        justify-content: space-between !important;
+    }
+
+    .admin-sidebar-header .logo {
+        gap: 8px !important;
+    }
+
+    .admin-sidebar-header .logo span {
+        font-size: 9px !important;
+        padding: 1px 6px !important;
+    }
+
+    /* Fix the "X" button position */
+    #admin-mobile-close {
+        padding: 8px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+    }
+
+    /* Resource Telemetry Stack */
+    .telemetry-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .telemetry-item {
+        border-right: none !important;
+        border-bottom: 1px solid var(--admin-border-color);
+        padding: 12px 8px !important;
+    }
+
+    .telemetry-grid .telemetry-item:nth-child(2) {
+        border-bottom: 1px solid var(--admin-border-color);
+    }
+
+    .telemetry-grid .telemetry-item:nth-child(3),
+    .telemetry-grid .telemetry-item:nth-child(4) {
+        border-bottom: none !important;
+    }
+
+    .telemetry-value {
+        font-size: 16px !important;
     }
 }

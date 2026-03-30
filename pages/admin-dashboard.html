@@ -31,11 +31,11 @@
                     <img src="../assets/images/logo.png" alt="Cogniva Logo" class="logo-icon">
                     Cogniva <span>ADMIN</span>
                 </a>
-                <button class="admin-icon-btn mobile-toggle" id="admin-mobile-close">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                <button class="admin-icon-btn mobile-toggle" id="admin-mobile-close" aria-label="Close Sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
-                    <span>Return to Page</span>
                 </button>
             </div>
 
@@ -255,22 +255,41 @@
 
                     <div class="admin-split-grid">
                         <div class="admin-card">
-                            <h3 class="admin-section-title" style="margin-bottom: 20px;">Recent Activity</h3>
-                            <div class="chart-placeholder">Growth Chart Placeholder</div>
+                            <h3 class="admin-section-title" style="margin-bottom: 20px;">System Traction (30 Days)</h3>
+                            <div class="chart-container" style="height: 220px; padding: 20px 0;">
+                                <svg viewBox="0 0 800 200" style="width: 100%; height: 100%; overflow: visible;" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="adminChartGrad" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="var(--admin-accent-primary)" stop-opacity="0.3" />
+                                            <stop offset="100%" stop-color="var(--admin-accent-primary)" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M0 180 C 100 180, 150 120, 250 130 C 350 140, 450 60, 550 80 C 650 100, 750 20, 800 40 L 800 200 L 0 200 Z" fill="url(#adminChartGrad)"></path>
+                                    <path d="M0 180 C 100 180, 150 120, 250 130 C 350 140, 450 60, 550 80 C 650 100, 750 20, 800 40" 
+                                          fill="none" stroke="var(--admin-accent-primary)" stroke-width="4" stroke-linecap="round"></path>
+                                    <circle cx="250" cy="130" r="4" fill="var(--admin-accent-primary)"></circle>
+                                    <circle cx="550" cy="80" r="4" fill="var(--admin-accent-primary)"></circle>
+                                    <circle cx="800" cy="40" r="4" fill="var(--admin-accent-primary)"></circle>
+                                </svg>
+                            </div>
                         </div>
                         <div class="admin-card">
-                            <h3 class="admin-section-title" style="margin-bottom: 20px;">System Health</h3>
+                            <h3 class="admin-section-title" style="margin-bottom: 20px;">Detailed Infrastructure</h3>
                             <div class="health-item">
-                                <div class="health-name">
-                                    <div class="health-indicator good"></div> Database
-                                </div>
-                                <span>Online</span>
+                                <div class="health-name"><div class="health-indicator good"></div> Database Clusters</div>
+                                <span style="font-size: 12px; font-weight: 600;">9ms Latency</span>
                             </div>
                             <div class="health-item">
-                                <div class="health-name">
-                                    <div class="health-indicator good"></div> API
-                                </div>
-                                <span>Online</span>
+                                <div class="health-name"><div class="health-indicator good"></div> API Gateway</div>
+                                <span style="font-size: 12px; font-weight: 600;">124 req/s</span>
+                            </div>
+                            <div class="health-item">
+                                <div class="health-name"><div class="health-indicator warn"></div> Memory Load</div>
+                                <span style="font-size: 12px; font-weight: 600;">78% (Peak)</span>
+                            </div>
+                            <div class="health-item">
+                                <div class="health-name"><div class="health-indicator good"></div> Storage (S3)</div>
+                                <span style="font-size: 12px; font-weight: 600;">4.2TB Available</span>
                             </div>
                         </div>
                     </div>
@@ -281,9 +300,74 @@
                     <div class="admin-section-header">
                         <h2 class="admin-section-title">Advanced Analytics</h2>
                     </div>
+                    <div class="admin-card" style="margin-bottom: 24px;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 24px;">
+                            <div>
+                                <h3 class="admin-section-title">Cohort Performance Drift</h3>
+                                <p style="color:var(--admin-text-muted); font-size:12px;">Comparative analysis of cognitive baseline vs. protocol saturation across 4 unique cohorts.</p>
+                            </div>
+                            <div class="status-badge active" style="box-shadow:none; font-size:10px;">Live Data Processing</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:20px;">
+                            <div>
+                                <h5 style="margin-bottom:12px; font-size:11px; color:#a0aec0;">Age 18-24 (Gen Z)</h5>
+                                <div style="height:120px; background:rgba(0,0,0,0.03); border-radius:8px; display:flex; align-items:flex-end; gap:4px; padding:8px;">
+                                    <div style="flex:1; height:40%; background:var(--admin-accent-primary); opacity:0.6; border-radius:4px;"></div>
+                                    <div style="flex:1; height:85%; background:var(--admin-accent-primary); border-radius:4px;"></div>
+                                </div>
+                                <span style="font-size:10px; color:var(--admin-accent-success);">+12.4% Stability</span>
+                            </div>
+                            <div>
+                                <h5 style="margin-bottom:12px; font-size:11px; color:#a0aec0;">Age 25-34 (Founders)</h5>
+                                <div style="height:120px; background:rgba(0,0,0,0.03); border-radius:8px; display:flex; align-items:flex-end; gap:4px; padding:8px;">
+                                    <div style="flex:1; height:60%; background:var(--admin-accent-primary); opacity:0.6; border-radius:4px;"></div>
+                                    <div style="flex:1; height:92%; background:var(--admin-accent-primary); border-radius:4px;"></div>
+                                </div>
+                                <span style="font-size:10px; color:var(--admin-accent-success);">+18.1% Capacity</span>
+                            </div>
+                            <div>
+                                <h5 style="margin-bottom:12px; font-size:11px; color:#a0aec0;">Age 35-50 (Executives)</h5>
+                                <div style="height:120px; background:rgba(0,0,0,0.03); border-radius:8px; display:flex; align-items:flex-end; gap:4px; padding:8px;">
+                                    <div style="flex:1; height:75%; background:var(--admin-accent-primary); opacity:0.6; border-radius:4px;"></div>
+                                    <div style="flex:1; height:65%; background:var(--admin-accent-primary); border-radius:4px;"></div>
+                                </div>
+                                <span style="font-size:10px; color:var(--admin-accent-warning);">-2.4% Variance</span>
+                            </div>
+                            <div>
+                                <h5 style="margin-bottom:12px; font-size:11px; color:#a0aec0;">50+ (Performance Longevity)</h5>
+                                <div style="height:120px; background:rgba(0,0,0,0.03); border-radius:8px; display:flex; align-items:flex-end; gap:4px; padding:8px;">
+                                    <div style="flex:1; height:30%; background:var(--admin-accent-primary); opacity:0.6; border-radius:4px;"></div>
+                                    <div style="flex:1; height:55%; background:var(--admin-accent-primary); border-radius:4px;"></div>
+                                </div>
+                                <span style="font-size:10px; color:var(--admin-accent-success);">+5.2% Baseline</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="admin-card">
-                        <h3 class="admin-section-title" style="margin-bottom: 24px;">Global User Growth</h3>
-                        <div class="chart-placeholder" style="height: 400px;">[ Detailed Analytics Chart ]</div>
+                        <h3 class="admin-section-title" style="margin-bottom: 24px;">Churn Risk vs. Protocol Complexity</h3>
+                        <div style="display:grid; grid-template-columns: repeat(14, 1fr); gap:6px;">
+                            <!-- Sophisticated Heatmap -->
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.9;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.75;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.6;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.5;"></div>
+                            <div style="aspect-ratio:1; background:#ecc94b; border-radius:3px; opacity:0.7;"></div>
+                            <div style="aspect-ratio:1; background:#ecc94b; border-radius:3px; opacity:0.9;"></div>
+                            <div style="aspect-ratio:1; background:#e53e3e; border-radius:3px; opacity:0.5;"></div>
+                            <div style="aspect-ratio:1; background:#e53e3e; border-radius:3px; opacity:0.8;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.8;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.3;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.1;"></div>
+                            <div style="aspect-ratio:1; background:#38a169; border-radius:3px; opacity:0.95;"></div>
+                            <div style="aspect-ratio:1; background:#ecc94b; border-radius:3px; opacity:0.4;"></div>
+                            <div style="aspect-ratio:1; background:#e53e3e; border-radius:3px; opacity:0.9;"></div>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-top:12px; font-size:10px; color:var(--admin-text-muted);">
+                            <span>Simple Protocol (L-Theanine)</span>
+                            <span>Legend: Low Risk → High Risk</span>
+                            <span>Complex Protocol (12+ Items)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -293,9 +377,52 @@
                         <h2 class="admin-section-title">System Reports</h2>
                     </div>
                     <div class="admin-card">
-                        <h3 class="admin-section-title">Available Reports</h3>
-                        <p>Generate and analyze periodic system performance reports.</p>
-                        <button class="admin-btn primary">Download Monthly Digest</button>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                            <h3 class="admin-section-title">Verified Documents</h3>
+                            <div style="font-size:10px; color:var(--admin-accent-success);">AES-256 Protocol Encrypted</div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:16px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:16px; background:rgba(0,0,0,0.02); border-radius:12px; border:1px solid var(--admin-border-color);">
+                                <div style="display:flex; align-items:center; gap:16px;">
+                                    <div style="font-size:24px; opacity:0.6;">📂</div>
+                                    <div>
+                                        <h4 style="margin:0 0 2px; font-size:14px; font-weight:700;">Global Biological Audit (Q1 2026)</h4>
+                                        <span style="font-size:11px; color:var(--admin-text-muted);">JSON Data Hub • 42.5MB • Yesterday at 11:42 PM</span>
+                                    </div>
+                                </div>
+                                <div style="display:flex; gap:8px;">
+                                    <button class="admin-btn">Preview</button>
+                                    <button class="admin-btn primary">Download</button>
+                                </div>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:16px; background:rgba(0,0,0,0.02); border-radius:12px; border:1px solid var(--admin-border-color);">
+                                <div style="display:flex; align-items:center; gap:16px;">
+                                    <div style="font-size:24px; opacity:0.6;">🛡️</div>
+                                    <div>
+                                        <h4 style="margin:0 0 2px; font-size:14px; font-weight:700;">Compliance & FDA Alignment Ledger</h4>
+                                        <span style="font-size:11px; color:var(--admin-text-muted);">PDF Report • 12MB • 3 days ago</span>
+                                    </div>
+                                </div>
+                                <div style="display:flex; gap:8px;">
+                                    <button class="admin-btn">Preview</button>
+                                    <button class="admin-btn primary">Download</button>
+                                </div>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:16px; background:rgba(0,0,0,0.02); border-radius:12px; border:1px solid var(--admin-border-color);">
+                                <div style="display:flex; align-items:center; gap:16px;">
+                                    <div style="font-size:24px; opacity:0.6;">🔬</div>
+                                    <div>
+                                        <h4 style="margin:0 0 2px; font-size:14px; font-weight:700;">Internal Research: Noopept Tolerance Baseline</h4>
+                                        <span style="font-size:11px; color:var(--admin-text-muted);">CSV Dataset • 8.2MB • Weekly Automated</span>
+                                    </div>
+                                </div>
+                                <div style="display:flex; gap:8px;">
+                                    <button class="admin-btn">Preview</button>
+                                    <button class="admin-btn primary">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="admin-btn primary" style="margin-top:24px; width:100%; height:48px; font-size:14px; letter-spacing:1px;">Initialize Custom Data Extraction</button>
                     </div>
                 </div>
 
@@ -326,11 +453,79 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Sarah Jenkins</td>
-                                        <td>Pro</td>
-                                        <td>2 hrs ago</td>
-                                        <td><span class="status-badge active">Active</span></td>
-                                        <td><button class="admin-btn">Edit</button></td>
+                                        <td data-label="User">
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&q=80" class="user-cell-img">
+                                                <div class="user-cell-info">
+                                                    <span class="user-cell-name">Sarah Jenkins</span>
+                                                    <span class="user-cell-email">s.jenkins@biolab.io</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="Plan"><span class="status-badge active" style="background:#f0f7ff; color:#3182ce; box-shadow:none;">PRO ELITE</span></td>
+                                        <td data-label="Active">2 hrs ago</td>
+                                        <td data-label="Status"><span class="status-badge active">Verified</span></td>
+                                        <td data-label="Actions"><button class="admin-btn">Protocol Audit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="User">
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&q=80" class="user-cell-img">
+                                                <div class="user-cell-info">
+                                                    <span class="user-cell-name">Marcus Aurelius</span>
+                                                    <span class="user-cell-email">m.aurelius@stoic.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="Plan">Standard</td>
+                                        <td data-label="Active">14 mins ago</td>
+                                        <td data-label="Status"><span class="status-badge active">Verified</span></td>
+                                        <td data-label="Actions"><button class="admin-btn">Protocol Audit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="User">
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&q=80" class="user-cell-img">
+                                                <div class="user-cell-info">
+                                                    <span class="user-cell-name">Julianna Vance</span>
+                                                    <span class="user-cell-email">j.vance@neuro.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="Plan"><span class="status-badge active" style="background:#fffaf0; color:#dd6b20; box-shadow:none;">RESEARCHER</span></td>
+                                        <td data-label="Active">4 mins ago</td>
+                                        <td data-label="Status"><span class="status-badge warning">Pending Auth</span></td>
+                                        <td data-label="Actions"><button class="admin-btn">Verify Identity</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="User">
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=64&q=80" class="user-cell-img">
+                                                <div class="user-cell-info">
+                                                    <span class="user-cell-name">Sofia Kovalev</span>
+                                                    <span class="user-cell-email">s.kovalev@moscow.sci</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="Plan">Pro</td>
+                                        <td data-label="Active">12 hours ago</td>
+                                        <td data-label="Status"><span class="status-badge active">Verified</span></td>
+                                        <td data-label="Actions"><button class="admin-btn">Protocol Audit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="User">
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&q=80" class="user-cell-img">
+                                                <div class="user-cell-info">
+                                                    <span class="user-cell-name">Kaito Tanaka</span>
+                                                    <span class="user-cell-email">tanaka@tokyo.net</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="Plan">Standard</td>
+                                        <td data-label="Active">2 days ago</td>
+                                        <td data-label="Status"><span class="status-badge active">Verified</span></td>
+                                        <td data-label="Actions"><button class="admin-btn">Protocol Audit</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -344,12 +539,46 @@
                         <h2 class="admin-section-title">Stacks Management</h2>
                     </div>
                     <div class="admin-card">
-                        <h3 class="admin-section-title">Supplement Stack Distribution</h3>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                            <h3 class="admin-section-title">Biological Compound Satisfaction</h3>
+                            <div style="font-size:10px; color:var(--admin-text-muted);">92% User Efficacy Rating Avg</div>
+                        </div>
                         <div class="stack-bar">
-                            <div class="stack-item"><span>Nootropics</span>
-                                <div class="progress-track">
-                                    <div class="progress-fill" style="width: 65%;"></div>
+                            <div class="stack-item">
+                                <div class="stack-item-left">
+                                    <span style="font-weight:600; min-width:100px;">Alpha-GPC</span>
+                                    <div class="progress-track"><div class="progress-fill" style="width: 82%;"></div></div>
                                 </div>
+                                <div style="display:flex; align-items:center; gap:8px;">
+                                    <span style="font-size:10px; color:var(--admin-accent-success);">+4.2% Satisfied</span>
+                                    <span class="stack-item-right">82%</span>
+                                </div>
+                            </div>
+                            <div class="stack-item">
+                                <div class="stack-item-left">
+                                    <span style="font-weight:600; min-width:100px;">L-Theanine</span>
+                                    <div class="progress-track"><div class="progress-fill" style="width: 65%;"></div></div>
+                                </div>
+                                <div style="display:flex; align-items:center; gap:8px;">
+                                    <span style="font-size:10px; color:var(--admin-accent-success);">+1.5% Satisfied</span>
+                                    <span class="stack-item-right">65%</span>
+                                </div>
+                            </div>
+                            <div class="stack-item">
+                                <div class="stack-item-left">
+                                    <span style="font-weight:600; min-width:100px;">Bacopa</span>
+                                    <div class="progress-track"><div class="progress-fill" style="width: 31%; background:#e53e3e;"></div></div>
+                                </div>
+                                <div style="display:flex; align-items:center; gap:8px;">
+                                    <span style="font-size:10px; color:var(--admin-accent-danger);">-12% Supply</span>
+                                    <span class="stack-item-right">31%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:24px; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; border:1px dashed var(--admin-border-color);">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-size:11px; font-weight:600;">Inventory Alert: Bacopa Monnieri nearing critical lows.</span>
+                                <button class="admin-btn danger" style="padding:4px 8px; font-size:10px;">Refill Stock</button>
                             </div>
                         </div>
                     </div>
@@ -361,18 +590,39 @@
                         <h2 class="admin-section-title">Community Moderation</h2>
                     </div>
                     <div class="admin-card">
-                        <h3 class="admin-section-title">Moderation Queue</h3>
-                        <div class="mod-item">
-                            <div class="mod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
-                                    </path>
-                                </svg></div>
-                            <div class="mod-details">
-                                <h4>Harmful Compound Flagged</h4>
-                                <p>User ID: 41092 logged extreme substances.</p>
-                                <button class="admin-btn danger">Take Action</button>
+                        <h3 class="admin-section-title" style="margin-bottom: 24px;">Flagged Content Dashboard</h3>
+                        <div class="mod-list">
+                            <div class="mod-item">
+                                <div class="mod-icon" style="color:var(--admin-accent-danger); background:rgba(229, 62, 62, 0.1); width:40px; height:40px; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <div class="mod-details" style="flex:1;">
+                                    <h4 style="margin:0 0 4px; font-size:14px;">Potential Misinformation: Flagged by Algorithm</h4>
+                                    <p style="margin:0; font-size:12px; color:var(--admin-text-muted);">Thread: "Does Noopept cause permanent downregulation?"</p>
+                                </div>
+                                <div class="action-btns">
+                                    <button class="admin-btn danger">Dismiss</button>
+                                    <button class="admin-btn primary">Escalate</button>
+                                </div>
+                            </div>
+                            <div class="mod-item">
+                                <div class="mod-icon" style="color:var(--admin-accent-warning); background:rgba(214, 158, 46, 0.1); width:40px; height:40px; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="mod-details" style="flex:1;">
+                                    <h4 style="margin:0 0 4px; font-size:14px;">Spam Detected: Repeated External Links</h4>
+                                    <p style="margin:0; font-size:12px; color:var(--admin-text-muted);">User ID: #88293 posted 12 affiliate links in 5 mins.</p>
+                                </div>
+                                <div class="action-btns">
+                                    <button class="admin-btn danger">Ban User</button>
+                                    <button class="admin-btn">Review</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -383,11 +633,58 @@
                     <div class="admin-section-header">
                         <h2 class="admin-section-title">System Health</h2>
                     </div>
-                    <div class="admin-card">
-                        <h3 class="admin-section-title">Real-time Infrastructure Monitoring</h3>
-                        <div class="health-item"><span>Primary DB</span><span class="status-badge active">Online</span>
+                    <div class="admin-card" style="margin-bottom: 24px;">
+                        <h3 class="admin-section-title" style="margin-bottom: 24px;">Regional Node Propagation</h3>
+                        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+                            <div style="padding:16px; background:#f0fdf4; border-radius:12px; border:1px solid #bbf7d0;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                    <span style="font-weight:700; font-size:12px; color:#166534;">North America</span>
+                                    <div style="width:8px; height:8px; border-radius:50%; background:#22c55e;"></div>
+                                </div>
+                                <div style="font-size:24px; font-weight:900; color:#14532d;">9ms</div>
+                                <span style="font-size:10px; color:#15803d;">Load: 12% • Latency Optimized</span>
+                            </div>
+                            <div style="padding:16px; background:#f0fdf4; border-radius:12px; border:1px solid #bbf7d0;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                    <span style="font-weight:700; font-size:12px; color:#166534;">Europe (Frankfurt)</span>
+                                    <div style="width:8px; height:8px; border-radius:50%; background:#22c55e;"></div>
+                                </div>
+                                <div style="font-size:24px; font-weight:900; color:#14532d;">18ms</div>
+                                <span style="font-size:10px; color:#15803d;">Load: 24% • Healthy Propagation</span>
+                            </div>
+                            <div style="padding:16px; background:#fff1f2; border-radius:12px; border:1px solid #fecdd3;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                    <span style="font-weight:700; font-size:12px; color:#991b1b;">Asia (Singapore)</span>
+                                    <div style="width:8px; height:8px; border-radius:50%; background:#ef4444; box-shadow:0 0 10px #ef4444;"></div>
+                                </div>
+                                <div style="font-size:24px; font-weight:900; color:#7f1d1d;">142ms</div>
+                                <span style="font-size:10px; color:#b91c1c;">Packet Drift Detected • Balancing...</span>
+                            </div>
                         </div>
-                        <div class="health-item"><span>API Gateway</span><span class="status-badge active">Online</span>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                            <h3 class="admin-section-title">Resource Saturation Telemetry</h3>
+                            <button class="admin-btn">Flush Cache</button>
+                        </div>
+                        <div class="telemetry-grid">
+                            <div class="telemetry-item">
+                                <div class="telemetry-label">Error Rate</div>
+                                <div class="telemetry-value success">0.002%</div>
+                            </div>
+                            <div class="telemetry-item">
+                                <div class="telemetry-label">Peak CPU</div>
+                                <div class="telemetry-value primary">42%</div>
+                            </div>
+                            <div class="telemetry-item">
+                                <div class="telemetry-label">Mem. Drift</div>
+                                <div class="telemetry-value warning">-0.4GB/hr</div>
+                            </div>
+                            <div class="telemetry-item no-border">
+                                <div class="telemetry-label">Auth Speed</div>
+                                <div class="telemetry-value">14ms</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -398,8 +695,33 @@
                         <h2 class="admin-section-title">Global Settings</h2>
                     </div>
                     <div class="admin-card">
-                        <h3 class="admin-section-title">Configuration</h3>
-                        <p>Modify system-wide parameters and admin access controls.</p>
+                    <div class="admin-card">
+                        <h3 class="admin-section-title" style="margin-bottom: 24px;">System Controls</h3>
+                        <div style="display:flex; flex-direction:column; gap:20px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div>
+                                    <h4 style="margin:0; font-size:14px;">Maintenance Mode</h4>
+                                    <p style="margin:0; font-size:12px; color:var(--admin-text-muted);">Restrict access to admins only for deployment.</p>
+                                </div>
+                                <input type="checkbox" style="width:40px; height:20px; cursor:pointer;">
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div>
+                                    <h4 style="margin:0; font-size:14px;">Debug Diagnostics</h4>
+                                    <p style="margin:0; font-size:12px; color:var(--admin-text-muted);">Enable verbose logging for API requests.</p>
+                                </div>
+                                <input type="checkbox" style="width:40px; height:20px; cursor:pointer;" checked>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div>
+                                    <h4 style="margin:0; font-size:14px;">Global User Registration</h4>
+                                    <p style="margin:0; font-size:12px; color:var(--admin-text-muted);">Allow new cognitive profiles to be generated.</p>
+                                </div>
+                                <input type="checkbox" style="width:40px; height:20px; cursor:pointer;" checked>
+                            </div>
+                        </div>
+                        <button class="admin-btn primary" style="margin-top:32px; width:100%;">Save Global State</button>
+                    </div>
                     </div>
                 </div>
 

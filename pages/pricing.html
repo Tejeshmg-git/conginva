@@ -18,186 +18,272 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         /* ----------------------------------------
-           PRICING V3 - NEXT-GEN PREMIUM ARCHITECTURE
+           PRICING V4 - ULTRA-PREMIUM ARCHITECTURE
            ---------------------------------------- */
         .pricing-modern {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            padding-top: 20px;
+            gap: 32px;
+            padding: 60px 0;
         }
 
-        /* CARD */
-        .price-card {
-            padding: 40px;
-            border-radius: 40px;
-            background: var(--white);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        /* CARD WRAPPER (For Gradient Border) */
+        .price-card-wrapper {
             position: relative;
+            padding: 2px;
+            border-radius: 42px;
+            background: rgba(0, 0, 0, 0.05);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+
+        .price-card-wrapper:hover {
+            background: linear-gradient(135deg, var(--gold-accent), #fff, var(--gold-accent));
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 40px 100px rgba(191, 164, 111, 0.2);
+        }
+
+        .price-card-wrapper.pro {
+            background: linear-gradient(135deg, var(--gold-accent), #fef9c3, var(--gold-accent));
+            box-shadow: 0 20px 60px rgba(191, 164, 111, 0.15);
+            transform: scale(1.05);
+        }
+
+        .price-card-wrapper.pro:hover {
+            transform: scale(1.07) translateY(-15px);
+            box-shadow: 0 50px 120px rgba(191, 164, 111, 0.3);
+        }
+
+        /* ACTUAL CARD */
+        .price-card {
+            padding: 60px 40px;
+            border-radius: 40px;
+            background: #ffffff;
+            text-align: center;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-            overflow: visible; /* To allow badge to pop out */
+            position: relative;
+            overflow: hidden;
         }
 
         body.dark-mode .price-card {
-            background: rgba(30, 30, 30, 0.4);
-            backdrop-filter: blur(25px);
-            border-color: rgba(255, 255, 255, 0.06);
+            background: #111111;
         }
 
-        /* PRO CARD */
-        .price-card.pro {
-            transform: scale(1.05);
-            border: 2px solid var(--gold-accent);
-            box-shadow: 0 30px 100px rgba(191, 164, 111, 0.2);
-            z-index: 10;
-            background: var(--white);
+        /* ICON AREA */
+        .plan-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(191, 164, 111, 0.1);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--gold-accent);
+            transition: all 0.5s ease;
         }
 
-        body.dark-mode .price-card.pro {
-            background: rgba(40, 40, 40, 0.5);
+        .price-card-wrapper:hover .plan-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: var(--gold-accent);
+            color: white;
         }
 
-        /* HOVER */
-        .price-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.08);
-        }
-
-        .price-card.pro:hover {
-            transform: scale(1.05) translateY(-12px);
-        }
-
-        /* PLAN */
+        /* PLAN LABEL */
         .plan {
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             font-weight: 800;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
             color: var(--gold-accent);
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-family: 'Outfit', sans-serif;
-            display: block;
         }
 
-        /* PRICE */
+        /* PRICE SECTION */
+        .price-wrap {
+            margin-bottom: 40px;
+        }
+
         .price {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 900;
             font-family: 'Outfit', sans-serif;
             letter-spacing: -0.05em;
-            margin: 0 0 30px;
             display: flex;
             align-items: baseline;
             justify-content: center;
-            line-height: 1;
+            line-height: 0.8;
+            color: var(--text-main);
+        }
+
+        .price .amount {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--text-main);
+            opacity: 1 !important;
         }
 
         .price span {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
             font-weight: 500;
-            margin-left: 4px;
+            margin-left: 8px;
             letter-spacing: 0;
         }
 
-        /* DIVIDER */
-        .divider {
-            height: 1px;
-            background: var(--border-color);
-            margin: 30px 0;
-            opacity: 0.5;
-        }
-
-        /* FEATURES */
+        /* FEATURE LIST */
         .features {
             text-align: left;
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 0 50px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
+            flex-grow: 1;
         }
 
         .features li {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             font-weight: 500;
+            transition: all 0.3s ease;
         }
 
-        .features li::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--gold-accent);
-            border-radius: 50%;
+        .features li svg {
+            width: 20px;
+            height: 20px;
+            color: var(--gold-accent);
             flex-shrink: 0;
+            opacity: 0.7;
         }
 
-        /* BADGE */
+        .price-card-wrapper:hover li {
+            color: var(--text-main);
+            transform: translateX(8px);
+        }
+
+        /* PRO BADGE - FLOATING PILL */
         .badge {
             position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 25px;
+            right: 25px;
             background: var(--gold-accent);
-            color: var(--white);
-            padding: 8px 18px;
+            color: white;
+            padding: 10px 20px;
             border-radius: 100px;
-            font-size: 11px;
+            font-size: 0.7rem;
             font-weight: 900;
-            text-transform: uppercase;
             letter-spacing: 0.1em;
-            box-shadow: 0 10px 25px rgba(191, 164, 111, 0.3);
-            white-space: nowrap;
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(184, 156, 99, 0.4);
+            animation: badgeFloat 3s infinite ease-in-out;
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
         /* BUTTONS */
         .price-card .btn {
-            padding: 18px;
-            border-radius: 100px;
-            font-size: 1rem;
-            font-weight: 700;
+            width: 100%;
+            padding: 22px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block;
-            text-decoration: none;
-            text-align: center;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-outline {
-            background: transparent;
-            border: 2px solid var(--border-color);
-            color: var(--text-main);
+            background: rgba(191, 164, 111, 0.05);
+            color: var(--gold-accent);
+            border: 2px solid rgba(191, 164, 111, 0.2);
         }
 
         .btn-outline:hover {
+            background: var(--gold-accent);
+            color: white;
             border-color: var(--gold-accent);
-            color: var(--gold-accent);
-            background: rgba(191, 164, 111, 0.05);
+            box-shadow: 0 15px 40px rgba(184, 156, 99, 0.4);
+        }
+
+        .btn-gold {
+            background: var(--gold-accent);
+            color: white;
+            box-shadow: 0 15px 45px rgba(184, 156, 99, 0.3);
+        }
+
+        .btn-gold:hover {
+            background: #a68b5a;
+            transform: scale(1.03);
+            box-shadow: 0 20px 60px rgba(184, 156, 99, 0.5);
         }
 
         @media (max-width: 1024px) {
-            .pricing-modern {
-                grid-template-columns: repeat(2, 1fr);
+            .pricing-modern { 
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 15px; 
             }
-            .price-card.pro {
-                transform: none;
+            .price-card-wrapper.pro { 
+                transform: scale(1.02); 
             }
-            .price-card.pro:hover {
-                transform: translateY(-12px);
+            .price-card {
+                padding: 40px 20px;
+            }
+            .price {
+                font-size: 3rem;
+            }
+            .price .amount {
+                font-size: 3rem;
+            }
+            .plan-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 20px;
+            }
+            .features {
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+            .features li {
+                font-size: 0.9rem;
             }
         }
 
         @media (max-width: 768px) {
             .pricing-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .price-card-wrapper:last-child {
+                grid-column: span 2;
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            .price-card-wrapper.pro {
+                transform: none; /* Reset 3D transform for better mobile fit */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .pricing-modern {
                 grid-template-columns: 1fr;
+            }
+            .price-card-wrapper:last-child {
+                grid-column: auto;
+                max-width: 100%;
             }
         }
 
@@ -319,25 +405,127 @@
             }
         }
 
-        /* USE CASE IMAGES */
-        .usecase-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 32px;
+        /* USE CASE SECTION */
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .usecase-item {
+            background: var(--white);
+            border-radius: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 40px;
+        }
+
+        body.dark-mode .usecase-item {
+            background: rgba(30, 30, 30, 0.3);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .usecase-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.06);
+            border-color: var(--gold-accent);
+        }
+
+        .usecase-icon {
+            width: 100%;
+            height: 240px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative;
         }
 
         .usecase-icon img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            transition: transform 0.4s ease;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
         .usecase-item:hover .usecase-icon img {
             transform: scale(1.1);
+        }
+
+        .usecase-item h4 {
+            font-size: 1.6rem;
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 12px;
+            padding: 0 30px;
+        }
+
+        .usecase-item p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            padding: 0 40px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .usecase-plan {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            padding: 0 30px;
+            color: var(--text-muted);
+        }
+
+        .usecase-plan strong {
+            color: var(--gold-accent);
+            font-weight: 800;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--gold-accent);
+            font-weight: 700;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .btn-link:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .usecase-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .usecase-item {
+                padding-bottom: 30px;
+            }
+            .usecase-item h4 {
+                padding: 0 20px;
+                font-size: 1.4rem;
+            }
+            .usecase-item p {
+                padding: 0 25px;
+                font-size: 0.95rem;
+            }
+            .usecase-plan {
+                padding: 0 20px;
+            }
+            .usecase-icon {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .usecase-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* SECTION: BEFORE vs AFTER EXPERIENCE */
@@ -631,61 +819,73 @@
                     <div class="toggle-indicator-v2" id="toggle-indicator"></div>
                 </div>
 
-                <!-- Plans Grid: MODERN SaaS LAYOUT -->
+                <!-- Plans Grid: ULTRA-PREMIUM LAYOUT -->
                 <div class="pricing-modern">
 
                     <!-- CARD: BEGINNER -->
-                    <div class="price-card reveal">
-                        <span class="plan">BEGINNER</span>
-                        <h2 class="price">$<span class="amount" data-monthly="0" data-yearly="0">0</span> <span>/mo</span></h2>
-                        
-                        <!-- CTA TOP -->
-                        <a href="register.html" class="btn btn-outline" style="width: 100%;">Start Free</a>
-                        
-                        <div class="divider"></div>
-                        
-                        <ul class="features">
-                            <li>Up to 5 Supplements</li>
-                            <li>Basic Tracking</li>
-                            <li>Community Access</li>
-                        </ul>
+                    <div class="price-card-wrapper reveal">
+                        <div class="price-card">
+                            <div class="plan-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 18c-1.5-1.5-2.5-3-2.5-5s1-4 4-4"/><path d="M15 18c1.5-1.5 2.5-3 2.5-5s-1-4-4-4"/><path d="M12 13V7"/><path d="M12 7c2.5 0 3.5-.5 3.5-2s-1-2-3.5-2-3.5.5-3.5 2 1 2 3.5 2Z"/></svg>
+                            </div>
+                            <span class="plan">BEGINNER</span>
+                            <div class="price-wrap">
+                                <h2 class="price">$<span class="amount" data-monthly="0" data-yearly="0">0</span> <span>/mo</span></h2>
+                            </div>
+                            
+                            <ul class="features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Up to 5 Supplements</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Basic Tracking</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Community Access</li>
+                            </ul>
+
+                            <a href="register.html" class="btn btn-outline">Start Free</a>
+                        </div>
                     </div>
 
                     <!-- CARD: PRO (FOCUS) -->
-                    <div class="price-card pro reveal" style="transition-delay: 0.1s;">
-                        <span class="badge">🔥 Most Popular</span>
-                        <span class="plan">PRO</span>
-                        <h2 class="price">$<span class="amount" data-monthly="19" data-yearly="15">19</span> <span>/mo</span></h2>
-                        
-                        <!-- CTA TOP -->
-                        <a href="register.html" class="btn btn-gold" style="width: 100%;">Unlock Pro 🚀</a>
-                        
-                        <div class="divider"></div>
-                        
-                        <ul class="features">
-                            <li>Unlimited Supplements</li>
-                            <li>Full AI Insights</li>
-                            <li>Real-time Analysis</li>
-                            <li>Priority Support</li>
-                        </ul>
+                    <div class="price-card-wrapper pro reveal" style="transition-delay: 0.1s;">
+                        <div class="price-card">
+                            <span class="badge">🔥 Popular</span>
+                            <div class="plan-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3"/><path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5"/></svg>
+                            </div>
+                            <span class="plan">PRO</span>
+                            <div class="price-wrap">
+                                <h2 class="price">$<span class="amount" data-monthly="19" data-yearly="15">19</span> <span>/mo</span></h2>
+                            </div>
+                            
+                            <ul class="features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Unlimited Supplements</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Full AI Insights</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Real-time Analysis</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Priority Support</li>
+                            </ul>
+
+                            <a href="register.html" class="btn btn-gold">Unlock Pro 🚀</a>
+                        </div>
                     </div>
 
                     <!-- CARD: ELITE -->
-                    <div class="price-card reveal" style="transition-delay: 0.2s;">
-                        <span class="plan">ELITE</span>
-                        <h2 class="price">$<span class="amount" data-monthly="49" data-yearly="39">49</span> <span>/mo</span></h2>
-                        
-                        <!-- CTA TOP -->
-                        <a href="register.html" class="btn btn-outline" style="width: 100%;">Go Elite</a>
-                        
-                        <div class="divider"></div>
-                        
-                        <ul class="features">
-                            <li>Everything in Pro</li>
-                            <li>Custom Stack Formulas</li>
-                            <li>Lab Data Integration</li>
-                            <li>Dedicated Neuro-Coach</li>
-                        </ul>
+                    <div class="price-card-wrapper reveal" style="transition-delay: 0.2s;">
+                        <div class="price-card">
+                            <div class="plan-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg>
+                            </div>
+                            <span class="plan">ELITE</span>
+                            <div class="price-wrap">
+                                <h2 class="price">$<span class="amount" data-monthly="49" data-yearly="39">49</span> <span>/mo</span></h2>
+                            </div>
+                            
+                            <ul class="features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Everything in Pro</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Custom Stack Formulas</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Lab Data Integration</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Dedicated Neuro-Coach</li>
+                            </ul>
+
+                            <a href="register.html" class="btn btn-outline">Go Elite</a>
+                        </div>
                     </div>
 
                 </div>

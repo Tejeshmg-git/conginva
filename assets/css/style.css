@@ -3870,6 +3870,30 @@ main {
     color: var(--text-main);
 }
 
+.step-item {
+    transition: all 0.4s var(--v2-transition);
+    opacity: 0.6;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+
+.step-item h4 {
+    transition: color 0.3s ease;
+}
+
+.step-item:hover,
+.step-item.active {
+    opacity: 1;
+    border-left-color: var(--feat-neon-gold);
+    transform: translateX(10px);
+}
+
+.step-item:hover h4 {
+    color: var(--feat-neon-gold);
+}
+
 .showcase-sticky-text {
     position: sticky;
     top: 200px;
@@ -4171,7 +4195,8 @@ main {
         gap: 50px;
     }
 
-    .automation-grid svg {
+    .automation-grid svg,
+    .automation-grid .automation-img {
         max-width: 300px;
         margin: 0 auto;
     }
@@ -4253,7 +4278,8 @@ main {
         font-size: 2.2rem !important;
     }
 
-    .automation-grid svg {
+    .automation-grid svg,
+    .automation-grid .automation-img {
         max-width: 250px;
     }
 
